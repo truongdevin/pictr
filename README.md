@@ -33,7 +33,7 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 ## Design Docs
 * [View Wireframes][views]
 * [React Components][components]
-<!-- * [Flux Cycles][flux-cycles] -->
+* [Flux Cycles][flux-cycles]
 * [API endpoints][api-endpoints]
 * [DB schema][schema]
 
@@ -131,7 +131,13 @@ Will insert photos by url. Will be implementing drag and drop upload in future.
 - [ ] Drop down bar displays matching users
 - [ ] Functional follow/unfollow button
 
-### Phase 9: User show (1 day)
+### Phase 9: Proper upload (1 day)
+
+**Objective:** Allows users to upload photos instead of entering url.
+
+- [ ] Can upload photo by dragging and dropping photo onto a box.
+
+### Phase 10: User show (1 day)
 
 **Objective:** Show user when clicking on their names from main page.
 
@@ -140,7 +146,7 @@ Will insert photos by url. Will be implementing drag and drop upload in future.
 - [ ] Clicking a photo shows all the comments and likes.
 
 
-### Phase 8: Styling Cleanup and Seeding (1 day)
+### Phase 11: Styling Cleanup and Seeding (1 day)
 
 **objective:** Make the site feel more cohesive and awesome.
 
