@@ -33,6 +33,7 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 ## Design Docs
 * [View Wireframes][views]
 * [React Components][components]
+* [Flux Cycles][flux-cycles]
 * [API endpoints][api-endpoints]
 * [DB schema][schema]
 
