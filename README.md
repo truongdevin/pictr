@@ -9,7 +9,7 @@
 Pictr is a web application inspired by Instagram/Flickr that will be build using Ruby on Rails and React.js.  By the end of Week 9, this app will, at a minimum, allow users to do the following:
 
 - [ ] Create new account, login, logout, and guest login
-- [ ] Upload and show off photos
+- [ ] Upload and display photos
 - [ ] Follow users
 - [ ] Like photos
 - [ ] Create and delete comments on photos
@@ -33,7 +33,7 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 ## Design Docs
 * [View Wireframes][views]
 * [React Components][components]
-* [Flux Cycles][flux-cycles]
+<!-- * [Flux Cycles][flux-cycles] -->
 * [API endpoints][api-endpoints]
 * [DB schema][schema]
 
@@ -55,14 +55,14 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 - [ ] user signup/signin pages
 - [ ] blank landing page after signin
 
-### Phase 2: Notes Model, API, and basic APIUtil (1.5 days)
+### Phase 2: Post Model, API, and basic APIUtil (1.5 days)
 
-**Objective:** Notes can be created, read, edited and destroyed through
-the API.
+**Objective:** Posts can be created, read, and destroyed through
+the API. Will implement drag and drop in future.
 
-- [ ] create `Note` model
+- [ ] create `Post` model
 - [ ] seed the database with a small amount of test data
-- [ ] CRUD API for notes (`NotesController`)
+- [ ] CRUD API for notes (`PostsController`)
 - [ ] jBuilder views for notes
 - [ ] setup Webpack & Flux scaffold
 - [ ] setup `APIUtil` to interact with the API
@@ -70,19 +70,25 @@ the API.
 
 ### Phase 3: Flux Architecture and Router (1.5 days)
 
-**Objective:** Notes can be created, read, edited and destroyed with the
-user interface.
+**Objective:** Posts can be created with the user interface and can display.
+All photos by all users will display on the screen. Will insert photos by url.
+Will be implementing drag and drop upload in future.
 
 - [ ] setup the flux loop with skeleton files
 - [ ] setup React Router
-- implement each note component, building out the flux loop as needed.
-  - [ ] `NotesIndex`
-  - [ ] `NoteIndexItem`
-  - [ ] `NoteForm`
-- [ ] save Notes to the DB when the form loses focus or is left idle
-  after editing.
+- implement each post component, building out the flux loop as needed.
+  - [ ] `PictureHeader`, shows poster name and time upload time
+  - [ ] `Picture`
+  - [ ] `CommentBox`, leave empty for now.
 
-### Phase 4: Start Styling (0.5 days)
+### Phase 4: Display correct posts (0.5 days)
+
+**Objective:** Only posts by followed users will display.
+Will insert photos by url. Will be implementing drag and drop upload in future.
+
+- [ ] change the logic regarding which posts are fetched depending on followed
+
+### Phase 5: Start Styling (0.5 days)
 
 **Objective:** Existing pages (including singup/signin) will look good.
 
@@ -90,40 +96,49 @@ user interface.
 - [ ] position elements on the page
 - [ ] add basic colors & styles
 
-### Phase 5: Notebooks (1 day)
+### Phase 6: Comments (1 day)
 
-**Objective:** Notes belong to Notebooks, and can be viewed by notebook.
+**Objective:** Posts have many Comments.
 
-- [ ] create `Notebook` model
+- [ ] create `Comment` model
 - build out API, Flux loop, and components for:
-  - [ ] Notebook CRUD
-  - [ ] adding notes requires a notebook
-  - [ ] moving notes to a different notebook
-  - [ ] viewing notes by notebook
+  - [ ] Comment CRUD
+  - [ ] Integrate Comment into `CommentBox`
 - Use CSS to style new views
 
-Phase 3 adds organization to the Notes. Notes belong to a Notebook,
-which has its own `Index` view.
+### Phase 6: Likes (1 day)
 
-### Phase 6: Tags (1.5 days)
+**Objective:** Posts have many Likes.
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
-
-- [ ] create `Tag` model and join table
+- [ ] create `Like` model
 - build out API, Flux loop, and components for:
-  - [ ] fetching tags for notebook
-  - [ ] adding tags to notebook
-  - [ ] creating tags while adding to notebooks
-  - [ ] searching notebooks by tag
-- [ ] Style new elements
+  - [ ] Like CRUD
+  - [ ] Integrate Like into `CommentBox`
+- Use CSS to style new views
 
-### Phase 7: Allow Complex Styling in Notes (0.5 days)
+### Phase 7: User Stores and basic APIUtil (0.5 day)
 
-**objective:** Enable complex styling of notes.
+**Objective:** Users can be read through the API.
 
-- [ ] Integrate `react-quill` (based on Quill.js).
-- [ ] Use Rails helpers to sanitize HTML before rendering.
-- [ ] Style the new Quill elements.
+- [ ] setup Flux
+- [ ] setup `APIUtil` to interact with the API
+- [ ] test out API interaction in the console.
+
+### Phase 8: User search (1 day)
+
+**Objective:** Show user and follow/unfollow button when using search bar.
+
+- [ ] Drop down bar displays matching users
+- [ ] Functional follow/unfollow button
+
+### Phase 9: User show (1 day)
+
+**Objective:** Show user when clicking on their names from main page.
+
+- [ ] Displays all their pictures
+- [ ] Functional follow/unfollow button
+- [ ] Clicking a photo shows all the comments and likes.
+
 
 ### Phase 8: Styling Cleanup and Seeding (1 day)
 
@@ -134,11 +149,8 @@ which has its own `Index` view.
 - [ ] Add modals, transitions, and other styling flourishes.
 
 ### Bonus Features (TBD)
-- [ ] Search through notes for blocks of text
-- [ ] Pagination / infinite scroll for Notes Index
-- [ ] Set reminders on notes
-- [ ] Changelogs for Notes
-- [ ] Multiple sessions
+- [ ] Allow upload of profile picture
+- [ ] Infinite Scrolling
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
