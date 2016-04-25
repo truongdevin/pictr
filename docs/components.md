@@ -23,5 +23,5 @@
       * `ProfilePicture`
       * `Information`
       * `Follow`
-    * `ProfileHeader`
+    * `UserPictures`
       * `Picture`
