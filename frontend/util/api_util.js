@@ -1,3 +1,4 @@
+var ServerActions = require("../actions/server_actions");
 
 module.exports = {
   fetchPosts: function(){
@@ -5,19 +6,29 @@ module.exports = {
       url: '/api/posts',
       method: 'GET',
       success: function(posts) {
-        console.log(posts);
+        ServerActions.receiveAll(posts);
       },
       dataType: 'json'
     });
   },
 
-  createPosts: function(data){
+  createPost: function(data){
     $.ajax({
       url: 'api/posts',
       method: 'POST',
       data: {post: data},
-      success: function(bench) {
-        console.log(bench);
+      success: function(post) {
+        ServerActions.receivePost(post);
+      }
+    });
+  },
+
+  fetchPost: function(id){
+    $.ajax({
+      url: 'api/posts/'+id,
+      method: 'GET',
+      success: function(post) {
+        ServerActions.receivePost(post);
       }
     });
   }
