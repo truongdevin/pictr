@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20160426181949) do
   add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
+    t.string   "full_name",       null: false
     t.string   "username",        null: false
     t.string   "password_digest", null: false
     t.string   "session_token",   null: false

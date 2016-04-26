@@ -2,6 +2,12 @@
 
 <form action="<%= users_url %>" method="post">
   <%= auth_token_input %>
+  
+  <label>
+    Full Name
+    <input type="text" name="user[full_name]" value="">
+  </label>
+
   <label>
     Username
     <input type="text" name="user[username]" value="">
