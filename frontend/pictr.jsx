@@ -7,6 +7,8 @@ var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
 var hashHistory = ReactRouter.hashHistory;
 
+ApiUtil = require('./util/api_util');
+
 var App = React.createClass({
   render: function(){
     return (
