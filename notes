@@ -1,5 +1,9 @@
-created post model
 TODO add name to user migration
-setup associations in model, (user has many posts; post belongs to user)
 TODO api::PostController, set up using normal json, no jbuilder yet
 TODO api_util should reference ServerAction
+
+
+THINGS TO REMEMBER
+-setup models
+-setup associations
+-setup routes

@@ -7,6 +7,7 @@ var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
 var hashHistory = ReactRouter.hashHistory;
 
+var Index = require('./components/index');
 // ApiUtil = require('./util/api_util');
 
 var App = React.createClass({
@@ -20,14 +21,14 @@ var App = React.createClass({
   }
 });
 
-var Routes = (
-  <Router history={hashHistory}>
-    <Route path="/" component={App}>
-    </Route>
-  </Router>
+var routes = (
+  <Route path="/" component={App}>
+    <IndexRoute component={Index} />
+    <Route path="posts" component={Index} />
+  </Route>
 );
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   var root = document.getElementById("root");
-  ReactDOM.render(Routes, root);
+  ReactDOM.render(<Router history={hashHistory} routes={routes}/>, root);
 });
