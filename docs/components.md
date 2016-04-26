@@ -1,10 +1,10 @@
 ## Component Hierarchy
 
 * `App`
+  * `NavBar`
+    * `SearchBar`
+    * `Upload`
   * `Index`
-    * `NavBar`
-      * `SearchBar`
-      * `Upload`
     * `PhotoFeed`
       * `Post`
         * `PictureHeader`
@@ -16,9 +16,6 @@
           * `LikeButton`
           * `CommentForm`
   * `UserShow`
-    * `NavBar`
-      * `SearchBar`
-      * `Upload`
     * `ProfileHeader`
       * `ProfilePicture`
       * `Information`
