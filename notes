@@ -2,8 +2,8 @@ TODO post json.jbuilder. do we need user_id in posts?
 TODO json.builder. need to implement likes + comments for posts
 TODO json.jbuilder. need to implement followers + following for users
 
-TODO TODAY
-fix errors
+TODO fix errors on sign in. should display NOT ON TOP LEFT CORNER!
+TODO flip background image
 
 THINGS TO REMEMBER
 -setup models

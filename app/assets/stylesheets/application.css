@@ -20,15 +20,21 @@
 
  body {
    background-color: #F8F8F8;
-
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
  }
 
- .auth-container {
-   background-color: lightpink;
-   margin: 200px auto;
-   width: 300px;
-   height: 300px;
- }
+.auth-container {
+  /*background-color: #F0F0F0;*/
+  background-color:white;
+  margin: 200px auto;
+  width: 300px;
+  height: 300px;
+  opacity: 0.8;
+  border: 1px solid lightgray;
+}
 
  .auth-form {
    position: relative;
@@ -45,8 +51,11 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    /*background-color: #333;*/
+    background-color: #333;
     background-color: lightpink;
+    /*background-color:white;
+    opacity: 0.8;
+    border: 1px solid lightgray;*/
 }
 
 .navbar-links li {
@@ -61,6 +70,7 @@
     /*background-color: #111;*/
     background-color: white;
     color: lightpink;
+    cursor: pointer;
 }
 
 .navbar-links .home-button {

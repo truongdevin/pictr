@@ -13,7 +13,7 @@ var Index = require('./components/index');
 // ApiUtil = require('./util/api_util');
 
 var App = React.createClass({
-  componentDidMount: function() {
+  componentWillMount: function() {
     console.log("APP MOUNTED");
     ClientActions.fetchCurrentUser();
   },

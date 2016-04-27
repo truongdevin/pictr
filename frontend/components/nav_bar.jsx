@@ -34,7 +34,6 @@ module.exports = React.createClass({
   },
 
   handleSignOut: function() {
-    // console.log("clicked SignOut");
     ClientActions.signOut();
   },
 
