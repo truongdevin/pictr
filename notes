@@ -1,4 +1,6 @@
 TODO post json.jbuilder. do we need user_id in posts?
+TODO tested ApiUtil#create. After it gets called, the dispatch needs to call PostStore#addPost
+      which will add the created post to _post and set the post.user = {username: current_user}.
 
 THINGS TO REMEMBER
 -setup models

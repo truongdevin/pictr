@@ -7,6 +7,7 @@ module.exports = {
       method: 'GET',
       success: function(posts) {
         ServerActions.receiveAll(posts);
+        console.log(posts);
       },
       dataType: 'json'
     });
