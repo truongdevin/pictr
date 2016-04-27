@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+
 gem 'bcrypt'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
@@ -42,6 +43,11 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'spring'
+end
+
+group :production do
+  gem 'newrelic_rpm'
+  gem 'rails_12factor' # error feedback
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
