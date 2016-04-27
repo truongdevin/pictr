@@ -1,8 +1,10 @@
 TODO post json.jbuilder. do we need user_id in posts?
 TODO json.builder. need to implement likes + comments for posts
 TODO json.jbuilder. need to implement followers + following for users
-TODO tested ApiUtil#create. After it gets called, the dispatch needs to call PostStore#addPost
-      which will add the created post to _post and set the post.user = {username: current_user}.
+
+TODO TODAY
+display photos!
+fix errors
 
 THINGS TO REMEMBER
 -setup models
@@ -16,3 +18,11 @@ NOTES
   -i fixed this by going into my session controller and setting it to render json and a 200 response.
     -instead of letting session controller redirect,
       now my ajax success callback would call window.location = "session/new";
+
+-i had trouble getting my frontend application to get the current user who was signed in.
+- i resolved this by making a new api::user_controller that has an index method.
+  - the index method calls the current_user method i defined in application_controller and outputs it in json
+  - once the user signs in, the app component mounts which has a "componentdidmount" method that calls
+    client action which calls api_utils#fetchCurrentUser which accesses the database to grab the current user
+    and set them inside a localStorage("currentUser", JSON.stringify(user)).
+    - to access the user. do JSON.parse(localStorage.getItem("currentUser")).id
