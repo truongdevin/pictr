@@ -5,7 +5,7 @@ module.exports = {
     ApiUtil.fetchPosts();
   },
 
-  createPosts: function(data) {
+  createPost: function(data) {
     ApiUtil.createPost(data);
   },
 

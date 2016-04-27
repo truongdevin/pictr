@@ -11,19 +11,41 @@ module.exports = React.createClass({
 
   },
 
+  //get initial state is just a placeholder until i implement cloudinary
+  getInitialState: function() {
+    return {
+      image_url:""
+    };
+  },
+
+  urlChange: function(e) {
+    e.preventDefault();
+    this.setState({image_url: e.target.value});
+  },
+
+  handleSubmit: function(e) {
+    e.preventDefault();
+    var postData = {
+      user_id: 1,
+      image_url: this.state.image_url
+    };
+    ClientActions.createPost(postData);
+    this.setState({image_url: ""});
+  },
+
   handleSignOut: function() {
     // console.log("clicked SignOut");
     ClientActions.signOut();
   },
 
   render: function() {
-    var placeholder = 'hi';
+    // this uploadPlaceholder will be replaced with cloudinary. Just testing.
     var uploadPlaceholder = <form onSubmit={this.handleSubmit}>
                               <input
                                 type="text"
-                                value={placeholder}
-                                onChange={this.titleChange} />
-                              <input type="submit" value="Create Post" />
+                                value={this.state.image_url}
+                                onChange={this.urlChange} />
+                              <input type="submit" value="Upload Photo" />
                             </form>;
 
 
