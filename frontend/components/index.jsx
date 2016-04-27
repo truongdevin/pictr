@@ -22,7 +22,7 @@ module.exports = React.createClass({
 
   render: function () {
     var posts = this.state.posts.map(function (post) {
-      return (<div key={post.id}> {post.image_url}</div>);
+      return (<div key={post.id}> {post.image_url} : {post.user.username}</div>);
     });
     return (
       <div className="post-index">

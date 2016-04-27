@@ -1,6 +1,4 @@
-TODO api::PostController, set up using normal json, no jbuilder yet
-TODO api_util should reference ServerAction
-
+TODO post json.jbuilder. do we need user_id in posts?
 
 THINGS TO REMEMBER
 -setup models

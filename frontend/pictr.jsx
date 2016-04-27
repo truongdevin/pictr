@@ -30,5 +30,7 @@ var routes = (
 
 document.addEventListener("DOMContentLoaded", function () {
   var root = document.getElementById("root");
-  ReactDOM.render(<Router history={hashHistory} routes={routes}/>, root);
+  if (root){
+    ReactDOM.render(<Router history={hashHistory} routes={routes}/>, root);
+  }
 });

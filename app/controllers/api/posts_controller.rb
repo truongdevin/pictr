@@ -1,7 +1,7 @@
 class Api::PostsController < ApplicationController
   def index
-    @posts = Post.all
-    render json: @posts
+    @posts = Post.includes(:user)
+    render :index
   end
 
   def create
@@ -15,7 +15,7 @@ class Api::PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    render json: @post
+    render :show
   end
 
   private

@@ -19,9 +19,10 @@ var setPost = function (post) {
 };
 
 PostStore.all = function () {
-  return Object.keys(_posts).map(function (postId) {
+  var allPosts = Object.keys(_posts).map(function (postId) {
     return _posts[postId];
   });
+  return allPosts.reverse();
 };
 
 PostStore.find = function (id) {
