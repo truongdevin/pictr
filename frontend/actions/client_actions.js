@@ -11,5 +11,9 @@ module.exports = {
 
   fetchPost: function(id) {
     ApiUtil.fetchPost(id);
+  },
+
+  signOut: function() {
+    ApiUtil.signOut();
   }
 };

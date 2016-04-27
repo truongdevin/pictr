@@ -1,4 +1,6 @@
 var ServerActions = require("../actions/server_actions");
+// var ReactRouter = require('react-router');
+// var hashHistory = ReactRouter.hashHistory;
 
 module.exports = {
   fetchPosts: function(){
@@ -30,6 +32,16 @@ module.exports = {
       method: 'GET',
       success: function(post) {
         ServerActions.receivePost(post);
+      }
+    });
+  },
+
+  signOut: function(){
+    $.ajax({
+      url: '/session/',
+      method: 'DELETE',
+      success: function() {
+        window.location = "session/new";
       }
     });
   }

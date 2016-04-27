@@ -20,6 +20,6 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to new_session_url
+    render json: ['signing out'], status:200
   end
 end
