@@ -1,10 +1,18 @@
 TODO post json.jbuilder. do we need user_id in posts?
+TODO json.builder. need to implement likes + comments for posts
+TODO json.jbuilder. need to implement followers + following for users
 TODO tested ApiUtil#create. After it gets called, the dispatch needs to call PostStore#addPost
       which will add the created post to _post and set the post.user = {username: current_user}.
-
-TODO navbar setup signout and upload.
 
 THINGS TO REMEMBER
 -setup models
 -setup associations
 -setup routes
+
+
+NOTES
+-had trouble with Sign out Button. It would throw an error but on refresh it would sign you out.
+  -the problem was that my ajax request was expecting some sort of json response.
+  -i fixed this by going into my session controller and setting it to render json and a 200 response.
+    -instead of letting session controller redirect,
+      now my ajax success callback would call window.location = "session/new";

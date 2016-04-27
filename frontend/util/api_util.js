@@ -41,7 +41,18 @@ module.exports = {
       url: '/session/',
       method: 'DELETE',
       success: function() {
+        localStorage.clear();
         window.location = "session/new";
+      }
+    });
+  },
+
+  fetchCurrentUser: function(){
+    $.ajax({
+      url: '/api/users',
+      method: 'GET',
+      success: function(user) {
+        localStorage.setItem('currentUser', JSON.stringify(user));
       }
     });
   }

@@ -26,7 +26,7 @@ module.exports = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
     var postData = {
-      user_id: 1,
+      user_id: JSON.parse(localStorage.getItem('currentUser')).id,
       image_url: this.state.image_url
     };
     ClientActions.createPost(postData);

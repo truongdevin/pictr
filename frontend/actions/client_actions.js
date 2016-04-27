@@ -15,5 +15,9 @@ module.exports = {
 
   signOut: function() {
     ApiUtil.signOut();
+  },
+
+  fetchCurrentUser: function() {
+    ApiUtil.fetchCurrentUser();
   }
 };

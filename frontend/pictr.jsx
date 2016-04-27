@@ -6,12 +6,18 @@ var Router = ReactRouter.Router;
 var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
 var hashHistory = ReactRouter.hashHistory;
+var ClientActions = require('./actions/client_actions');
 
 var NavBar = require('./components/nav_bar');
 var Index = require('./components/index');
 // ApiUtil = require('./util/api_util');
 
 var App = React.createClass({
+  componentDidMount: function() {
+    console.log("APP MOUNTED");
+    ClientActions.fetchCurrentUser();
+  },
+
   render: function(){
     return (
         <div>
