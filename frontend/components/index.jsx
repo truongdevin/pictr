@@ -27,7 +27,7 @@ module.exports = React.createClass({
       return (<Post key={post.id} post={post}/>);
     });
     return (
-      <div className="post-index">
+      <div>
         <div>{posts}</div>
       </div>
     );

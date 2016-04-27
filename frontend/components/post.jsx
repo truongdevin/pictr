@@ -4,9 +4,9 @@ module.exports = React.createClass({
   render: function(){
     var post = this.props.post;
     return(
-      <div>
+      <div className="individual-post">
         <h3>{post.user.username}</h3>
-        {post.image_url}
+        <img className="index-photos" src={post.image_url}/>
         <div>Comments go Here</div>
       </div>
     );

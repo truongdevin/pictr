@@ -23,14 +23,14 @@
 
  }
 
- .container {
-   background-color: lightblue;
+ .auth-container {
+   background-color: lightpink;
    margin: 200px auto;
    width: 300px;
    height: 300px;
  }
 
- .form {
+ .auth-form {
    position: relative;
    margin: 0 auto;
    padding: 20px 20px 20px;
@@ -45,8 +45,8 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    /*background-color: grey*/
+    /*background-color: #333;*/
+    background-color: lightpink;
 }
 
 .navbar-links li {
@@ -55,14 +55,29 @@
     color: white;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
 }
 
 .navbar-links li:hover {
     /*background-color: #111;*/
-    background-color: yellowgreen;
+    background-color: white;
+    color: lightpink;
 }
 
 .navbar-links .home-button {
   float: left;
+}
+
+.individual-post {
+  background-color: white;
+  margin: auto;
+  margin-top: 10px;
+  width: 500px;
+  border: 1px solid lightgray;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.index-photos {
+  width: 500px;
+  height: auto;
 }
