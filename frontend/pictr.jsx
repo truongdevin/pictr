@@ -7,6 +7,7 @@ var Route = ReactRouter.Route;
 var IndexRoute = ReactRouter.IndexRoute;
 var hashHistory = ReactRouter.hashHistory;
 
+var NavBar = require('./components/nav_bar');
 var Index = require('./components/index');
 // ApiUtil = require('./util/api_util');
 
@@ -14,7 +15,7 @@ var App = React.createClass({
   render: function(){
     return (
         <div>
-          <header><h1>Pictr</h1></header>
+          <NavBar/>
           {this.props.children}
         </div>
     );
