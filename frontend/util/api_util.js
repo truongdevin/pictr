@@ -71,7 +71,10 @@ module.exports = {
       url: "api/comments/" + id,
       type: "DELETE",
       success: function (comment) {
-        ServerActions.removePost(comment);
+        ServerActions.removeComment(comment);
+      },
+      error: function() {
+        console.log('you fucked up');
       }
     });
   }

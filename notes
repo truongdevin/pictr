@@ -6,6 +6,8 @@ TODO api::comments_controller. may need to implement an index for the user show 
 TODO fix errors on sign in. should display NOT ON TOP LEFT CORNER!
 TODO fix background images.
 
+TODO w7d1 for search bar
+
 
 THINGS TO REMEMBER
 -setup models

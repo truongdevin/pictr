@@ -24,13 +24,14 @@ module.exports = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className="comment-form-box">
         <form onSubmit={this.handleSubmit}>
-          <input
+          <input className="comment-form-textbox"
+            placeholder="Add a comment..."
             type="text"
             value={this.state.body}
             onChange={this.bodyChange} />
-          <input type="submit" value="Post Comment!" />
+          <input className="button-hidden" type="submit" value="Post Comment!" />
         </form>
       </div>
     );

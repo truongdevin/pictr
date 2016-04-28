@@ -14,20 +14,54 @@
  *= require_self
  */
 
- * {
-   font-family: sans-serif;
- }
+html,section, article,
+h1, h2, p, strong, em, a {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
 
- body {
-   background-color: #F8F8F8;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
- }
+body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+}
+
+* {
+  font-family: sans-serif;
+  font-size: 15px;
+}
+
+body {
+  background-color: #F8F8F8;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.button-hidden {
+  height: 1px;
+  width: 1px;
+  position: absolute;
+  z-index: -100;
+}
 
 .auth-container {
-  /*background-color: #F0F0F0;*/
+/*background-color: #F0F0F0;*/
   background-color:white;
   margin: 200px auto;
   width: 300px;
@@ -36,41 +70,40 @@
   border: 1px solid lightgray;
 }
 
- .auth-form {
-   position: relative;
-   margin: 0 auto;
-   padding: 20px 20px 20px;
-   /*width: 310px;*/
-   top: 50%;
-   transform: translateY(-50%);
-   width: 50%;
- }
+.auth-form {
+  position: relative;
+  margin: 0 auto;
+  padding: 20px 20px 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50%;
+}
 
- .navbar-links {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    background-color: lightpink;
-    /*background-color:white;
-    opacity: 0.8;
-    border: 1px solid lightgray;*/
+.navbar-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  background-color: lightpink;
+  /*background-color:white;
+  opacity: 0.8;
+  border: 1px solid lightgray;*/
 }
 
 .navbar-links li {
-    float: right;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+  float: right;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
 }
 
 .navbar-links li:hover {
-    /*background-color: #111;*/
-    background-color: white;
-    color: lightpink;
-    cursor: pointer;
+  /*background-color: #111;*/
+  background-color: white;
+  color: lightpink;
+  cursor: pointer;
 }
 
 .navbar-links .home-button {
@@ -93,9 +126,30 @@
 }
 
 .comments-box {
+  /*padding: 20px 20px 0 20px;*/
   padding: 20px;
+  border-bottom: 1px solid lightgray;
 }
 
 .comment-single {
   padding: 5px;
+}
+
+.comment-form-box {
+  padding: 20px;
+}
+
+.comment-form-textbox {
+  border: 1px solid white;
+  height: 20px;
+  width: 100%;
+  /*font-size: 15px;*/
+}
+
+.comment-form-textbox:focus {
+  outline: none;
+}
+
+.comment-form-textbox::-webkit-input-placeholder {
+   font-size: 14px;
 }

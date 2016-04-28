@@ -1,5 +1,6 @@
 var React = require('react');
 var CommentForm = require('./comment_form');
+var IndividualComment = require('./individual_comment');
 
 module.exports = React.createClass({
 
@@ -7,7 +8,7 @@ module.exports = React.createClass({
     var post = this.props.post;
     var comments = post.comments.map(function(comment){
       return (
-        <div className="comment-single" key={comment.id}>{comment.user.username}: {comment.body}</div>
+        <IndividualComment key={comment.id} comment={comment}/>
       );
     });
     return (

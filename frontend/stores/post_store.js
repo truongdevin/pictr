@@ -23,6 +23,20 @@ var setComment = function (comment) {
   _posts[comment.post_id].comments.push(comment);
 };
 
+var removeComment = function (comment) {
+  var allComments = _posts[comment.post_id].comments.slice();
+  var idx;
+  for (var i=0; i<allComments.length ; i++) {
+    if (allComments[i].id === comment.id) {
+      idx = i;
+      allComments.splice(idx,1);
+    }
+    _posts[comment.post_id].comments = allComments;
+    // delete allComments[idx];
+    // _posts[comment.post_id].comments = allComments.filter(function(e){ return e === 0 || e; });
+  }
+};
+
 PostStore.all = function () {
   var allPosts = Object.keys(_posts).map(function (postId) {
     return _posts[postId];
@@ -45,6 +59,9 @@ PostStore.__onDispatch = function (payload) {
       break;
     case PostConstants.COMMENT_RECEIVED:
       setComment(payload.comment);
+      break;
+    case PostConstants.COMMENT_REMOVED:
+      removeComment(payload.comment);
       break;
   }
   this.__emitChange();
