@@ -1,4 +1,5 @@
 var React = require('react');
+var CommentForm = require('./comment_form');
 
 module.exports = React.createClass({
 
@@ -12,6 +13,7 @@ module.exports = React.createClass({
     return (
       <div>
         <div className="comments-box">{comments}</div>
+        <CommentForm post_id={post.id}/>
       </div>
     );
   }

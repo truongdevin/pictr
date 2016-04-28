@@ -19,6 +19,10 @@ var setPost = function (post) {
   _posts[post.id] = post;
 };
 
+var setComment = function (comment) {
+  _posts[comment.post_id].comments.push(comment);
+};
+
 PostStore.all = function () {
   var allPosts = Object.keys(_posts).map(function (postId) {
     return _posts[postId];
@@ -38,6 +42,9 @@ PostStore.__onDispatch = function (payload) {
       break;
     case PostConstants.POST_RECEIVED:
       setPost(payload.post);
+      break;
+    case PostConstants.COMMENT_RECEIVED:
+      setComment(payload.comment);
       break;
   }
   this.__emitChange();
