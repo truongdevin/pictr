@@ -19,4 +19,8 @@ p3 = Post.create!(user_id: teja.id, image_url: "http://i.imgur.com/0MLPCux.jpg")
 p4 = Post.create!(user_id: jenn.id, image_url: "http://i.imgur.com/YcDszjN.png")
 p5 = Post.create!(user_id: brandon.id, image_url: "http://i.imgur.com/IAoRZe9.jpg")
 p6 = Post.create!(user_id: teja.id, image_url: "http://i.imgur.com/EKKIKYD.jpg")
-p6 = Post.create!(user_id: dev.id, image_url: "http://imgur.com/HhGf2jq")
+p7 = Post.create!(user_id: dev.id, image_url: "http://i.imgur.com/7MR533g.jpg")
+
+
+c1 = Comment.create!(user_id: jenn.id, post_id: p7.id, body: "OMG looks good!")
+c2 = Comment.create!(user_id: lianna.id, post_id: p7.id, body: "ikr. tfti")
