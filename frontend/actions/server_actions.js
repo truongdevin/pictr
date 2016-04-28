@@ -14,5 +14,19 @@ module.exports = {
       actionType: PostConstants.POST_RECEIVED,
       post: post
     });
+  },
+
+  receiveComment: function (comment) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.COMMENT_RECEIVED,
+      comment: comment
+    });
+  },
+
+  removeComment: function (comment) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.COMMENT_REMOVED,
+      comment: comment
+    });
   }
 };

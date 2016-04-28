@@ -1,6 +1,6 @@
 class Api::PostsController < ApplicationController
   def index
-    @posts = Post.includes(:user)
+    @posts = Post.includes([:user,:comments])
     render :index
   end
 

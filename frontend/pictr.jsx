@@ -10,7 +10,7 @@ var ClientActions = require('./actions/client_actions');
 
 var NavBar = require('./components/nav_bar');
 var Index = require('./components/index');
-// ApiUtil = require('./util/api_util');
+ApiUtil = require('./util/api_util');
 
 var App = React.createClass({
   componentWillMount: function() {

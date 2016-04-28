@@ -19,5 +19,13 @@ module.exports = {
 
   fetchCurrentUser: function() {
     ApiUtil.fetchCurrentUser();
+  },
+
+  createComment: function(data) {
+    ApiUtil.createComment(data);
+  },
+
+  deleteComment: function(id) {
+    ApiUtil.removeComment(id);
   }
 };

@@ -55,5 +55,27 @@ module.exports = {
         localStorage.setItem('currentUser', JSON.stringify(user));
       }
     });
+  },
+
+  createComment: function(data){
+    $.ajax({
+      url: 'api/comments',
+      method: 'POST',
+      data: {comment: data},
+      dataType: 'json',
+      success: function(comment) {
+        ServerActions.receiveComment(comment);
+      }
+    });
+  },
+
+  removeComment: function (id) {
+    $.ajax({
+      url: "api/comments/" + id,
+      type: "DELETE",
+      success: function (comment) {
+        ServerActions.removePost(comment);
+      }
+    });
   }
 };
