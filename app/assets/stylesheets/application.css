@@ -153,3 +153,22 @@ body {
 .comment-form-textbox::-webkit-input-placeholder {
    font-size: 14px;
 }
+
+.comment-and-delete {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete-button {
+  border: 1px solid white;
+  background-color: white;
+  color: lightgrey;
+}
+
+.delete-button:hover {
+  cursor: pointer;
+}
+
+.delete-button:focus {
+  outline: none;
+}
