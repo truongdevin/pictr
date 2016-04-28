@@ -72,10 +72,18 @@ module.exports = {
       type: "DELETE",
       success: function (comment) {
         ServerActions.removeComment(comment);
-      },
-      error: function() {
-        console.log('you fucked up');
       }
+    });
+  },
+
+  fetchUsers: function(){
+    $.ajax({
+      url: '/api/users',
+      method: 'GET',
+      success: function(users) {
+        ServerActions.receiveUsers(users);
+      },
+      dataType: 'json'
     });
   }
 };

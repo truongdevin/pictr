@@ -27,5 +27,9 @@ module.exports = {
 
   deleteComment: function(id) {
     ApiUtil.removeComment(id);
+  },
+
+  fetchUsers: function() {
+    ApiUtil.fetchUsers();
   }
 };

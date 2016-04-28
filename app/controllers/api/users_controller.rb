@@ -1,6 +1,12 @@
 class Api::UsersController < ApplicationController
   def index
-    @user = User.all
+    # @users = User.includes([:user,:comments])
+    @users = User.all
     render :index
+  end
+
+  def show
+    @user = User.find(params[:id])
+    render :show
   end
 end

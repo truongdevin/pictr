@@ -28,5 +28,12 @@ module.exports = {
       actionType: PostConstants.COMMENT_REMOVED,
       comment: comment
     });
+  },
+
+  receiveUsers: function (users) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.USERS_RECEIVED,
+      users: users
+    });
   }
 };
