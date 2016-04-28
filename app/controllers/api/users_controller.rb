@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
   def index
-    @user = current_user
+    @user = User.all
     render :index
   end
 end

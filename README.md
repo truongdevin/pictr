@@ -88,7 +88,7 @@ Will be implementing drag and drop upload in future.
 - [x] create `Comment` model
 - build out API, Flux loop, and components for:
   - [x] Comment CRUD
-  - [ ] Integrate Comment into `CommentBox`
+  - [x] Integrate Comment into `CommentBox`
 - Use CSS to style new views
 
 ### Phase 7: Likes (0.5 day) [5.5 days elapsed]

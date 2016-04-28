@@ -46,7 +46,7 @@ module.exports = {
 
   fetchCurrentUser: function(){
     $.ajax({
-      url: '/api/users',
+      url: '/api/sessions',
       method: 'GET',
       success: function(user) {
         localStorage.setItem('currentUser', JSON.stringify(user));
