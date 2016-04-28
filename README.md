@@ -74,7 +74,14 @@ Will be implementing drag and drop upload in future.
 - [x] position elements on the page
 - [x] add basic colors & styles
 
-### Phase 6: Comments (0.5 day) [4.5 days elapsed]
+### Phase 5: Proper upload (0.5 day) [4.5 days elapsed]
+
+**Objective:** Allows users to upload photos instead of entering url.
+
+- [x] Set up Cloudinary.
+- [x] Can upload photo by dragging and dropping photo onto a box.
+
+### Phase 6: Comments (0.5 day) [5.0 days elapsed]
 
 **Objective:** Posts have many Comments.
 
@@ -84,7 +91,7 @@ Will be implementing drag and drop upload in future.
   - [ ] Integrate Comment into `CommentBox`
 - Use CSS to style new views
 
-### Phase 7: Likes (0.5 day) [5.0 days elapsed]
+### Phase 7: Likes (0.5 day) [5.5 days elapsed]
 
 **Objective:** Posts have many Likes.
 
@@ -94,7 +101,7 @@ Will be implementing drag and drop upload in future.
   - [ ] Integrate Like into `CommentBox`
 - Use CSS to style new views
 
-### Phase 8: User Stores and basic APIUtil (0.5 day) [5.5 days elapsed]
+### Phase 8: User Stores and basic APIUtil (0.5 day) [6.0 days elapsed]
 
 **Objective:** Users can be read through the API.
 
@@ -102,14 +109,14 @@ Will be implementing drag and drop upload in future.
 - [ ] setup `APIUtil` to interact with the API
 - [ ] test out API interaction in the console.
 
-### Phase 8: User search (1 day) [6.5 days elapsed]
+### Phase 9: User search (1 day) [7.0 days elapsed]
 
 **Objective:** Show user and follow/unfollow button when using search bar.
 
 - [ ] Drop down bar displays matching users
 - [ ] Functional follow/unfollow button
 
-### Phase 9: Follows (0.5 day) [7.0 days elapsed]
+### Phase 10: Follows (0.5 day) [7.5 days elapsed]
 
 **Objective:** Posts have many Follows.
 
@@ -118,21 +125,14 @@ Will be implementing drag and drop upload in future.
   - [ ] Like CRUD
 - Use CSS to style new views
 
-### Phase 10: Display correct posts (1.0 days) [8.0 days elapsed]
+### Phase 11: Display correct posts (0.5 days) [8.0 days elapsed]
 
 **Objective:** Only posts by followed users will display.
 Will insert photos by url. Will be implementing drag and drop upload in future.
 
 - [ ] change the logic regarding which posts are fetched depending on followed
 
-### Phase 11: Proper upload (1 day) [9.0 days elapsed]
-
-**Objective:** Allows users to upload photos instead of entering url.
-
-- [ ] Can upload photo by dragging and dropping photo onto a box.
-
-
-### Phase 12: Styling Cleanup and Seeding (1 day) [10.0 days elapsed]
+### Phase 12: Styling Cleanup and Seeding (1 day) [9.0 days elapsed]
 
 **objective:** Make the site feel more cohesive and awesome.
 

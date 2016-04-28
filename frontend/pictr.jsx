@@ -14,7 +14,6 @@ ApiUtil = require('./util/api_util');
 
 var App = React.createClass({
   componentWillMount: function() {
-    console.log("APP MOUNTED");
     ClientActions.fetchCurrentUser();
   },
 
