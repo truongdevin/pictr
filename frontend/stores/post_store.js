@@ -32,8 +32,6 @@ var removeComment = function (comment) {
       allComments.splice(idx,1);
     }
     _posts[comment.post_id].comments = allComments;
-    // delete allComments[idx];
-    // _posts[comment.post_id].comments = allComments.filter(function(e){ return e === 0 || e; });
   }
 };
 
