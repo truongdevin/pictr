@@ -81,13 +81,21 @@
   background-color: white;
   margin: auto;
   margin-top: 10px;
-  width: 500px;
+  width: 600px;
   border: 1px solid lightgray;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 .index-photos {
-  width: 500px;
+  width: 600px;
   height: auto;
+}
+
+.comments-box {
+  padding: 20px;
+}
+
+.comment-single {
+  padding: 5px;
 }

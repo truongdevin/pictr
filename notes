@@ -4,7 +4,8 @@ TODO json.jbuilder. need to implement followers + following for users
 TODO api::comments_controller. may need to implement an index for the user show page.
 
 TODO fix errors on sign in. should display NOT ON TOP LEFT CORNER!
-TODO flip background image
+TODO fix background images.
+
 
 THINGS TO REMEMBER
 -setup models
