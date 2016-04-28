@@ -2,7 +2,7 @@
 
 [Heroku link][heroku] **NB:** This should be a link to your production site
 
-[heroku]: http://pictr-app.heroku.com/
+[heroku]: https://pictr-app.herokuapp.com/
 
 ## Minimum Viable Product
 
@@ -10,25 +10,10 @@ Pictr is a web application inspired by Instagram/Flickr that will be build using
 
 - [ ] Create new account, login, logout, and guest login
 - [ ] Upload and display photos
-- [ ] Follow users
-- [ ] Like photos
 - [ ] Create and delete comments on photos
+- [ ] Like photos
 - [ ] Browse a CSS styled website that is satisfactorily visually appealing
 
-
-## Product Goals and Priorities
-
-FresherNote will allow users to do the following:
-
-<!-- This is a Markdown checklist. Use it to keep track of your
-progress. Put an x between the brackets for a checkmark: [x] -->
-
-- [ ] Create an account (MVP)
-- [ ] Log in / Log out, including as a Guest/Demo User (MVP)
-- [ ] Create, read, edit, and delete notes (MVP)
-- [ ] Organize notes within Notebooks (MVP)
-- [ ] Tag notes with multiple tags (expected feature, but not MVP)
-- [ ] Apply complex styling to notes while editing (expected feature, but not MVP)
 
 ## Design Docs
 * [View Wireframes][views]
@@ -49,24 +34,24 @@ progress. Put an x between the brackets for a checkmark: [x] -->
 
 **Objective:** Functioning rails project with Authentication
 
-- [ ] create new project
-- [ ] create `User` model
-- [ ] authentication
-- [ ] user signup/signin pages
-- [ ] blank landing page after signin
+- [x] create new project
+- [x] create `User` model
+- [x] authentication
+- [x] user signup/signin pages
+- [x] blank landing page after signin
 
 ### Phase 2: Post Model, API, and basic APIUtil (1.5 days) [2.0 days elapsed]
 
 **Objective:** Posts can be created, read, and destroyed through
 the API. Will implement drag and drop in future.
 
-- [ ] create `Post` model
-- [ ] seed the database with a small amount of test data
-- [ ] CRUD API for notes (`PostsController`)
-- [ ] jBuilder views for posts
-- [ ] setup Webpack & Flux scaffold
-- [ ] setup `APIUtil` to interact with the API
-- [ ] test out API interaction in the console.
+- [x] create `Post` model
+- [x] seed the database with a small amount of test data
+- [x] CRUD API for notes (`PostsController`)
+- [x] jBuilder views for posts
+- [x] setup Webpack & Flux scaffold
+- [x] setup `APIUtil` to interact with the API
+- [x] test out API interaction in the console.
 
 ### Phase 3: Flux Architecture and Router (1.5 days) [3.5 days elapsed]
 
@@ -74,39 +59,32 @@ the API. Will implement drag and drop in future.
 All photos by all users will display on the screen. Will insert photos by url.
 Will be implementing drag and drop upload in future.
 
-- [ ] setup the flux loop with skeleton files
-- [ ] setup React Router
+- [x] setup the flux loop with skeleton files
+- [x] setup React Router
 - implement each post component, building out the flux loop as needed.
   - [ ] `PictureHeader`, shows poster name and time upload time
-  - [ ] `Picture`
-  - [ ] `CommentBox`, leave empty for now.
+  - [x] `Picture`
+  - [x] `CommentBox`, leave empty for now.
 
-### Phase 4: Display correct posts (0.5 days) [4.0 days elapsed]
-
-**Objective:** Only posts by followed users will display.
-Will insert photos by url. Will be implementing drag and drop upload in future.
-
-- [ ] change the logic regarding which posts are fetched depending on followed
-
-### Phase 5: Page Layout (0.5 days) [4.5 days elapsed]
+### Phase 4: Page Layout (0.5 days) [4.0 days elapsed]
 
 **Objective:** Existing pages (including singup/signin) will look good.
 
-- [ ] ensure current layout is appropriate
-- [ ] position elements on the page
-- [ ] add basic colors & styles
+- [x] ensure current layout is appropriate
+- [x] position elements on the page
+- [x] add basic colors & styles
 
-### Phase 6: Comments (0.5 day) [5.0 days elapsed]
+### Phase 6: Comments (0.5 day) [4.5 days elapsed]
 
 **Objective:** Posts have many Comments.
 
-- [ ] create `Comment` model
+- [x] create `Comment` model
 - build out API, Flux loop, and components for:
-  - [ ] Comment CRUD
+  - [x] Comment CRUD
   - [ ] Integrate Comment into `CommentBox`
 - Use CSS to style new views
 
-### Phase 6: Likes (0.5 day) [5.5 days elapsed]
+### Phase 7: Likes (0.5 day) [5.0 days elapsed]
 
 **Objective:** Posts have many Likes.
 
@@ -116,7 +94,7 @@ Will insert photos by url. Will be implementing drag and drop upload in future.
   - [ ] Integrate Like into `CommentBox`
 - Use CSS to style new views
 
-### Phase 7: User Stores and basic APIUtil (0.5 day) [6.0 days elapsed]
+### Phase 8: User Stores and basic APIUtil (0.5 day) [5.5 days elapsed]
 
 **Objective:** Users can be read through the API.
 
@@ -124,29 +102,37 @@ Will insert photos by url. Will be implementing drag and drop upload in future.
 - [ ] setup `APIUtil` to interact with the API
 - [ ] test out API interaction in the console.
 
-### Phase 8: User search (1 day) [7.0 days elapsed]
+### Phase 8: User search (1 day) [6.5 days elapsed]
 
 **Objective:** Show user and follow/unfollow button when using search bar.
 
 - [ ] Drop down bar displays matching users
 - [ ] Functional follow/unfollow button
 
-### Phase 9: Proper upload (1 day) [8.0 days elapsed]
+### Phase 9: Follows (0.5 day) [7.0 days elapsed]
+
+**Objective:** Posts have many Follows.
+
+- [ ] create `Follow` model
+- build out API, Flux loop, and components for:
+  - [ ] Like CRUD
+- Use CSS to style new views
+
+### Phase 10: Display correct posts (1.0 days) [8.0 days elapsed]
+
+**Objective:** Only posts by followed users will display.
+Will insert photos by url. Will be implementing drag and drop upload in future.
+
+- [ ] change the logic regarding which posts are fetched depending on followed
+
+### Phase 11: Proper upload (1 day) [9.0 days elapsed]
 
 **Objective:** Allows users to upload photos instead of entering url.
 
 - [ ] Can upload photo by dragging and dropping photo onto a box.
 
-### Phase 10: User show (1 day) [9.0 days elapsed]
 
-**Objective:** Show user when clicking on their names from main page.
-
-- [ ] Displays all their pictures
-- [ ] Functional follow/unfollow button
-- [ ] Clicking a photo shows all the comments and likes.
-
-
-### Phase 11: Styling Cleanup and Seeding (1 day) [10.0 days elapsed]
+### Phase 12: Styling Cleanup and Seeding (1 day) [10.0 days elapsed]
 
 **objective:** Make the site feel more cohesive and awesome.
 
@@ -155,8 +141,10 @@ Will insert photos by url. Will be implementing drag and drop upload in future.
 - [ ] Add modals, transitions, and other styling flourishes.
 
 ### Bonus Features (TBD)
-- [ ] Allow upload of profile picture
+- [ ] Show user page when clicking their names from front page
+- [ ] Clicking photos in a user page brings up modal with photo, comments, and likes
 - [ ] Infinite Scrolling
+- [ ] Allow upload of profile picture
 
 [phase-one]: ./docs/phases/phase1.md
 [phase-two]: ./docs/phases/phase2.md
