@@ -2,6 +2,7 @@ var React = require('react');
 var ReactRouter = require('react-router');
 var ClientActions = require('../actions/client_actions.js');
 var hashHistory = ReactRouter.hashHistory;
+var SearchBar = require('./search_bar');
 
 module.exports = React.createClass({
   handleHome: function() {
@@ -32,6 +33,7 @@ module.exports = React.createClass({
           <li onClick={this.handleSignOut}>Sign Out </li>
           <li>Profile</li>
           <li onClick={this.upload}>Upload</li>
+          <li><SearchBar/></li>
           <li className="home-button" onClick={this.handleHome}>Pictr</li>
         </ul>
       </div>
