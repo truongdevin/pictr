@@ -39,10 +39,10 @@ module.exports = React.createClass({
 
     return (
       <div>
-        <input type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="User search" />
+        <input className= "dropdown" type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="User search" />
         <ul>
           {libraries.map(function(l){
-            return <li key={l.id}>{l.username}</li>;
+            return <li className= "dropdown-content" key={l.id}>{l.username}</li>;
             }) }
           </ul>
         </div>
