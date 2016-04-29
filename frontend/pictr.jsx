@@ -14,9 +14,11 @@ var Index = require('./components/index');
 // ApiUtil = require('./util/api_util');
 // UserStore = require('./stores/user_store');
 
+// does putting it out here have it get called earlier than in componentWillMount?
+ClientActions.fetchCurrentUser();
+
 var App = React.createClass({
   componentWillMount: function() {
-    ClientActions.fetchCurrentUser();
   },
 
   render: function(){
