@@ -85,5 +85,27 @@ module.exports = {
       },
       dataType: 'json'
     });
-  }
+  },
+
+  createRelationship: function(data){
+    $.ajax({
+      url: 'api/relationships',
+      method: 'POST',
+      data: {relationship: data},
+      dataType: 'json',
+      success: function(relationship) {
+        ServerActions.receiveRelationship(relationship);
+      }
+    });
+  },
+
+  removeRelationship: function (id) {
+    $.ajax({
+      url: "api/relationships/" + id,
+      type: "DELETE",
+      success: function (relationship) {
+        ServerActions.removeRelationship(relationship);
+      }
+    });
+  },
 };

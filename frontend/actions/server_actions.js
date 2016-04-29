@@ -35,5 +35,21 @@ module.exports = {
       actionType: PostConstants.USERS_RECEIVED,
       users: users
     });
+  },
+
+  receiveRelationship: function (relationship) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.RELATIONSHIP_RECEIVED,
+      relationship: relationship
+    });
+  },
+
+  removeRelationship: function (relationship) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.RELATIONSHIP_REMOVED,
+      relationship: relationship
+    });
   }
+
+
 };

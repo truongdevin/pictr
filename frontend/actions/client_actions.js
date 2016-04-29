@@ -31,5 +31,13 @@ module.exports = {
 
   fetchUsers: function() {
     ApiUtil.fetchUsers();
+  },
+
+  createRelationship: function(data) {
+    ApiUtil.createRelationship(data);
+  },
+
+  deleteRelationship: function(id) {
+    ApiUtil.removeRelationship(id);
   }
 };
