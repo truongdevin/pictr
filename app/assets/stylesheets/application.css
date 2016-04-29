@@ -28,6 +28,10 @@ h1, h2, p, strong, em, a {
   background: transparent;
 }
 
+ul {
+  list-style-type: none;
+}
+
 body {
   margin: 0;
   border: 0;
@@ -80,30 +84,30 @@ body {
 }
 
 .navbar-links {
-  list-style-type: none;
+  display: flex;
+  /*justify-content: space-between;*/
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
-  overflow: hidden;
-  background-color: #333;
+  /*background-color: #333;*/
   background-color: lightpink;
-  /*background-color:white;
-  opacity: 0.8;
-  border: 1px solid lightgray;*/
+  color: white;
+}
+
+.home-button {
+  margin-right: auto;
 }
 
 .navbar-links li {
-  float: right;
-  display: block;
-  color: white;
-  text-align: center;
   padding: 14px 16px;
 }
 
 .navbar-links li:hover {
   /*background-color: #111;*/
-  background-color: white;
+  background-color: #F8F8F8;
   color: lightpink;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .navbar-links .home-button {
@@ -143,7 +147,6 @@ body {
   border: 1px solid white;
   height: 20px;
   width: 100%;
-  /*font-size: 15px;*/
 }
 
 .comment-form-textbox:focus {
@@ -181,12 +184,12 @@ body {
 }
 
 .dropdown-content {
-  color: black;
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
+  display: block;
+  padding: 15px 20px;
+  background-color: #F8F8F8;
+  color: #7B8585;
+  margin-bottom: 3px;
+  position: relative;
   z-index: 1;
+  transition: 0.3s;
 }

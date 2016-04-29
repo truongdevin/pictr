@@ -30,11 +30,11 @@ module.exports = React.createClass({
     return(
       <div>
         <ul className="navbar-links">
-          <li onClick={this.handleSignOut}>Sign Out </li>
-          <li>Profile</li>
-          <li onClick={this.upload}>Upload</li>
-          <li><SearchBar/></li>
           <li className="home-button" onClick={this.handleHome}>Pictr</li>
+          <li><SearchBar/></li>
+          <li onClick={this.upload}>Upload</li>
+          <li>Profile</li>
+          <li onClick={this.handleSignOut}>Sign Out </li>
         </ul>
       </div>
     );
