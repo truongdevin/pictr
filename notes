@@ -6,7 +6,10 @@ TODO api::comments_controller. may need to implement an index for the user show 
 TODO fix errors on sign in. should display NOT ON TOP LEFT CORNER!
 TODO fix background images.
 
-TODO w7d1 for search bar
+Following
+belongs_to :user,
+primary_key: :id,
+foreign_key: :follower_id
 
 
 THINGS TO REMEMBER

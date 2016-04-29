@@ -24,3 +24,7 @@ p7 = Post.create!(user_id: dev.id, image_url: "http://i.imgur.com/7MR533g.jpg")
 
 c1 = Comment.create!(user_id: jenn.id, post_id: p7.id, body: "OMG looks good!")
 c2 = Comment.create!(user_id: lianna.id, post_id: p7.id, body: "ikr. tfti")
+
+r1 = Relationship.create!(follower_id: jenn.id, followed_id: dev.id)
+r2 = Relationship.create!(follower_id: brandon.id, followed_id: dev.id)
+r3 = Relationship.create!(follower_id: teja.id, followed_id: dev.id)

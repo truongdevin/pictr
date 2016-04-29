@@ -15,11 +15,11 @@ var Modal = require("react-modal");
 // ApiUtil = require('./util/api_util');
 // UserStore = require('./stores/user_store');
 
-// does putting it out here have it get called earlier than in componentWillMount?
-ClientActions.fetchCurrentUser();
 
 var App = React.createClass({
   componentWillMount: function() {
+    // is this the earliest this can run?
+    ClientActions.fetchCurrentUser();
   },
 
   render: function(){
