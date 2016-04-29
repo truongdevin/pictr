@@ -1,6 +1,7 @@
 var React = require('react');
 var UserStore = require('../stores/user_store.js');
 var ClientActions = require('../actions/client_actions.js');
+var RelationshipButton = require('./relationship_button');
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -33,17 +34,19 @@ module.exports = React.createClass({
       libraries = libraries.filter(function(l){
         return l.username.toLowerCase().match(searchString);
       });
-    } else {
-      libraries = [];
     }
+
+    var dropdownContent = libraries.map(function(l){
+      return (
+        <li className="dropdown-content" key={l.id}>{l.username}:<RelationshipButton user={l}/></li>
+      );
+    });
 
     return (
       <div>
         <input className="dropdown" type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="User search" />
         <ul>
-          {libraries.map(function(l){
-            return <li className="dropdown-content" key={l.id}>{l.username}</li>;
-            }) }
+          {dropdownContent}
           </ul>
         </div>
     );

@@ -7,18 +7,9 @@ json.array! @users do |user|
     end
   end
 
+  json.followers do
+    json.array! user.followers do |follower|
+      json.username follower.username
+    end
+  end
 end
-
-
-# json.array! @posts do |post|
-#   json.extract! post, :id, :user_id, :image_url, :created_at
-#   json.user post.user, :username
-#
-#   json.comments do
-#     json.array! post.comments do |comment|
-#       json.body comment.body
-#       json.id comment.id
-#       json.user comment.user, :username
-#     end
-#   end
-# end
