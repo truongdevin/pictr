@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
     foreign_key: :followed_id,
     class_name: :Relationship
 
-  has_many :following,
+  has_many :followed_users,
     through: :relationships,
     source: :followed
 

@@ -20,6 +20,6 @@ class Api::RelationshipsController < ApplicationController
 
   private
   def relationship_params
-    params.require(:relationship).permit(:user_id, :image_url)
+    params.require(:relationship).permit(:follower_id, :followed_id)
   end
 end
