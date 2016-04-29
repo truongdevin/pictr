@@ -1,16 +1,17 @@
 # Pictr (Work In Progress)
 
-[Heroku link][heroku] **NB:** This should be a link to your production site
+[Heroku link][heroku]
 
 [heroku]: https://pictr-app.herokuapp.com/
 
 ## Minimum Viable Product
 
-Pictr is a web application inspired by Instagram/Flickr that will be build using Ruby on Rails and React.js.  By the end of Week 9, this app will, at a minimum, allow users to do the following:
+Pictr is a web application inspired by Instagram/Flickr that will be build using Ruby on Rails and React.js. By the end of Week 9, this app will, at a minimum, allow users to do the following:
 
-- [ ] Create new account, login, logout, and guest login
-- [ ] Upload and display photos
-- [ ] Create and delete comments on photos
+- [x] Create new account, login, logout, and guest login
+- [x] Upload and display photos
+- [x] Create and delete comments on photos
+- [ ] Follow users
 - [ ] Like photos
 - [ ] Browse a CSS styled website that is satisfactorily visually appealing
 
@@ -91,34 +92,25 @@ Will be implementing drag and drop upload in future.
   - [x] Integrate Comment into `CommentBox`
 - Use CSS to style new views
 
-### Phase 7: Likes (0.5 day) [5.5 days elapsed]
 
-**Objective:** Posts have many Likes.
-
-- [ ] create `Like` model
-- build out API, Flux loop, and components for:
-  - [ ] Like CRUD
-  - [ ] Integrate Like into `CommentBox`
-- Use CSS to style new views
-
-### Phase 8: User Stores and basic APIUtil (0.5 day) [6.0 days elapsed]
+### Phase 7: User Stores and basic APIUtil (0.5 day) [5.5 days elapsed]
 
 **Objective:** Users can be read through the API.
 
-- [ ] setup Flux
-- [ ] setup `APIUtil` to interact with the API
-- [ ] test out API interaction in the console.
+- [x] setup Flux
+- [x] setup `APIUtil` to interact with the API
+- [x] test out API interaction in the console.
 
-### Phase 9: User search (1 day) [7.0 days elapsed]
+### Phase 9: User search (1 day) [6.5 days elapsed]
 
 **Objective:** Show user and follow/unfollow button when using search bar.
 
-- [ ] Drop down bar displays matching users
+- [x] Drop down bar displays matching users
 - [ ] Functional follow/unfollow button
 
-### Phase 10: Follows (0.5 day) [7.5 days elapsed]
+### Phase 10: Follows (1.0 day) [7.5 days elapsed]
 
-**Objective:** Posts have many Follows.
+**Objective:** Users have many Follows.
 
 - [ ] create `Follow` model
 - build out API, Flux loop, and components for:
@@ -132,18 +124,20 @@ Will insert photos by url. Will be implementing drag and drop upload in future.
 
 - [ ] change the logic regarding which posts are fetched depending on followed
 
-### Phase 12: Styling Cleanup and Seeding (1 day) [9.0 days elapsed]
+### Phase 12: Likes (0.5 day) [8.5 days elapsed]
 
-**objective:** Make the site feel more cohesive and awesome.
+**Objective:** Posts have many Likes.
 
-- [ ] Get feedback on my UI from others
-- [ ] Refactor HTML classes & CSS rules
-- [ ] Add modals, transitions, and other styling flourishes.
+- [ ] create `Like` model
+- build out API, Flux loop, and components for:
+- [ ] Like CRUD
+- [ ] Integrate Like into `CommentBox`
+- Use CSS to style new views
 
 ### Bonus Features (TBD)
+- [ ] Infinite Scrolling
 - [ ] Show user page when clicking their names from front page
 - [ ] Clicking photos in a user page brings up modal with photo, comments, and likes
-- [ ] Infinite Scrolling
 - [ ] Allow upload of profile picture
 
 [phase-one]: ./docs/phases/phase1.md

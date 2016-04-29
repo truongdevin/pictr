@@ -10,6 +10,7 @@ var ClientActions = require('./actions/client_actions');
 
 var NavBar = require('./components/nav_bar');
 var Index = require('./components/index');
+var Modal = require("react-modal");
 
 // ApiUtil = require('./util/api_util');
 // UserStore = require('./stores/user_store');
@@ -39,6 +40,7 @@ var routes = (
 );
 
 document.addEventListener("DOMContentLoaded", function () {
+  Modal.setAppElement(document.body);
   var root = document.getElementById("root");
   if (root){
     ReactDOM.render(<Router history={hashHistory} routes={routes}/>, root);
