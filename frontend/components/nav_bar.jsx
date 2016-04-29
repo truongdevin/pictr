@@ -77,7 +77,7 @@ module.exports = React.createClass({
           <li className="home-button" onClick={this.handleHome}>Pictr</li>
           <li onClick={this.openModal}>Search</li>
           <li onClick={this.upload}>Upload</li>
-          <li onClick={this.openModal}>Profile</li>
+          <li>Profile</li>
           <li onClick={this.handleSignOut}>Sign Out </li>
         </ul>
         <Modal
