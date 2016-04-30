@@ -38,8 +38,8 @@ module.exports = React.createClass({
 
     var dropdownContent = allUsers.map(function(singleUser){
       return (
-        <ul className="dropdown-content">
-          <li key={singleUser.id}>{singleUser.username}</li>
+        <ul key={singleUser.id} className="dropdown-content">
+          <li>{singleUser.username}</li>
           <li><RelationshipButton user={singleUser}/></li>
         </ul>
       );

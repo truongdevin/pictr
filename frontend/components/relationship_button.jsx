@@ -29,14 +29,14 @@ module.exports = React.createClass({
     var user = this.props.user;
     var self = this;
     var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    var relationshipButton = <span onClick={this.handleFollow}>Follow</span>;
+    var relationshipButton = <div onClick={this.handleFollow}>Follow</div>;
 
     currentUser.relationships.forEach(function(relationship){
       if (relationship.followed_id === user.id) {
-        relationshipButton = <span onClick={self.handleUnfollow}>Unfollow</span>;
+        relationshipButton = <div onClick={self.handleUnfollow}>Unfollow</div>;
       }
     });
 
-    return <span>{relationshipButton}</span>;
+    return <div className="follow-button">{relationshipButton}</div>;
   }
 });

@@ -197,3 +197,12 @@ body {
   z-index: 1;
   transition: 0.3s;
 }
+
+.follow-button {
+  background-color: white;
+  padding: 5px 10px;
+}
+
+.follow-button:hover {
+  cursor: pointer;
+}
