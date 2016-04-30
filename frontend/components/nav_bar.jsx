@@ -17,10 +17,10 @@ var style = {
   },
   content : {
     position        : 'fixed',
-    top             : '100px',
-    left            : '150px',
-    right           : '150px',
-    bottom          : '100px',
+    top             : '25%',
+    left            : '30%',
+    right           : '30%',
+    bottom          : '25%',
     border          : '1px solid #ccc',
     padding         : '20px',
     backgroundColor : '#ffe9ec',
@@ -35,15 +35,6 @@ module.exports = React.createClass({
   getInitialState: function(){
     return({ modalOpen: false });
   },
-
-  // componentDidMount: function () {
-  //   this.navListener = UserStore.addListener(this.rerender);
-  //   // ClientActions.fetchUsers();
-  // },
-  //
-  // rerender: function () {
-  //
-  // },
 
   closeModal: function(){
     this.setState({ modalOpen: false });

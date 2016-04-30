@@ -18,7 +18,6 @@ module.exports = React.createClass({
   },
 
   getUsers: function () {
-    // debugger;
     this.setState({ users: UserStore.all() });
   },
 
@@ -27,29 +26,29 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var libraries = this.state.users,
+    var allUsers = this.state.users,
       searchString = this.state.searchString.trim().toLowerCase();
 
     if(searchString.length > 0){
 
-      libraries = libraries.filter(function(l){
-        return l.username.toLowerCase().match(searchString);
+      allUsers = allUsers.filter(function(singleUser){
+        return singleUser.username.toLowerCase().match(searchString);
       });
     }
 
-    var dropdownContent = libraries.map(function(l){
+    var dropdownContent = allUsers.map(function(singleUser){
       return (
-        <li className="dropdown-content" key={l.id}>{l.username}:<RelationshipButton user={l}/></li>
+        <div className="dropdown-content" key={singleUser.id}>{singleUser.username}:<RelationshipButton user={singleUser}/></div>
       );
     });
 
     return (
-      <div>
-        <input className="dropdown" type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="User search" />
-        <ul>
+      <div className='dropdown-container'>
+        <input className="dropdown-input" type="text" value={this.state.searchString} onChange={this.handleChange} placeholder="User search" />
+        <div className='dropdown-box'>
           {dropdownContent}
-          </ul>
         </div>
+      </div>
     );
   }
 });

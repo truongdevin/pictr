@@ -6,12 +6,6 @@ TODO api::comments_controller. may need to implement an index for the user show 
 TODO fix errors on sign in. should display NOT ON TOP LEFT CORNER!
 TODO fix background images.
 
-Following
-belongs_to :user,
-primary_key: :id,
-foreign_key: :follower_id
-
-
 THINGS TO REMEMBER
 -setup models
 -setup associations
@@ -32,3 +26,5 @@ NOTES
     client action which calls api_utils#fetchCurrentUser which accesses the database to grab the current user
     and set them inside a localStorage("currentUser", JSON.stringify(user)).
     - to access the user. do JSON.parse(localStorage.getItem("currentUser")).id
+
+- FUCK FOLLOW/UNFOLLOW!
