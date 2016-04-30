@@ -11,7 +11,7 @@ Pictr is a web application inspired by Instagram/Flickr that will be build using
 - [x] Create new account, login, logout, and guest login
 - [x] Upload and display photos
 - [x] Create and delete comments on photos
-- [ ] Follow users
+- [x] Follow users
 - [ ] Like photos
 - [ ] Browse a CSS styled website that is satisfactorily visually appealing
 
@@ -106,15 +106,15 @@ Will be implementing drag and drop upload in future.
 **Objective:** Show user and follow/unfollow button when using search bar.
 
 - [x] Drop down bar displays matching users
-- [ ] Functional follow/unfollow button
+- [x] Functional follow/unfollow button
 
 ### Phase 10: Follows (1.0 day) [7.5 days elapsed]
 
 **Objective:** Users have many Follows.
 
-- [ ] create `Follow` model
+- [x] create `Follow` model
 - build out API, Flux loop, and components for:
-  - [ ] Like CRUD
+  - [x] Like CRUD
 - Use CSS to style new views
 
 ### Phase 11: Display correct posts (0.5 days) [8.0 days elapsed]

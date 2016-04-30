@@ -15,9 +15,6 @@ var Modal = require("react-modal");
 // ApiUtil = require('./util/api_util');
 // UserStore = require('./stores/user_store');
 
-// is this the earliest this can run?
-// YES. set a conditional to only do this if the cookie is empty
-ClientActions.fetchCurrentUser();
 
 var App = React.createClass({
   componentWillMount: function() {
@@ -41,9 +38,11 @@ var routes = (
 );
 
 document.addEventListener("DOMContentLoaded", function () {
+  // is this the earliest this can run?
   Modal.setAppElement(document.body);
   var root = document.getElementById("root");
   if (root){
+    ClientActions.fetchCurrentUser();
     ReactDOM.render(<Router history={hashHistory} routes={routes}/>, root);
   }
 });
