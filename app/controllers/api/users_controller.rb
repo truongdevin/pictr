@@ -1,7 +1,7 @@
 class Api::UsersController < ApplicationController
   def index
-    # @users = User.all
-    @users = User.includes(:followed_users)
+    # fix this. still N+1 query
+    @users = User.includes(:followed_users, :followers)
     render :index
   end
 

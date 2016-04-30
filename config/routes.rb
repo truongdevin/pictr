@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   namespace :api, defaults: {format: :json} do
     resources :posts, only: [:create, :index, :show]
     resources :comments, only: [:create, :destroy]
+    resources :likes, only: [:create, :destroy]
     resources :sessions, only: [:index]
     resources :users, only: [:index]
     resources :relationships, only: [:create, :destroy]

@@ -30,3 +30,10 @@ id          | integer   | not null, primary key
 user_id     | integer   | not null, foreign key (references users), indexed
 post_id     | integer   | not null, foreign key (references posts), indexed
 body        | string    | not null
+
+## likes
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+user_id     | integer   | not null, foreign key (references users), indexed
+post_id     | integer   | not null, foreign key (references posts), indexed

@@ -1,8 +1,4 @@
 class Api::CommentsController < ApplicationController
-  # def index
-  #   @comments = Comment.includes(:user)
-  #   render :index
-  # end
 
   def create
     @comment = Comment.new(comment_params)
