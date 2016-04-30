@@ -18,7 +18,6 @@ module.exports = React.createClass({
     var relationshipId;
     var currentUser = JSON.parse(localStorage.getItem('currentUser'));
     currentUser.relationships.forEach(function(relationship){
-      // debugger;
       if (relationship.followed_id === self.props.user.id) {
         relationshipId = relationship.id;
       }
@@ -29,12 +28,15 @@ module.exports = React.createClass({
   render: function() {
     var user = this.props.user;
     var self = this;
+    var currentUser = JSON.parse(localStorage.getItem('currentUser'));
     var relationshipButton = <span onClick={this.handleFollow}>Follow</span>;
-    user.followers.forEach(function(follow) {
-      if (follow.username === JSON.parse(localStorage.getItem('currentUser')).username) {
+
+    currentUser.relationships.forEach(function(relationship){
+      if (relationship.followed_id === user.id) {
         relationshipButton = <span onClick={self.handleUnfollow}>Unfollow</span>;
       }
     });
+
     return <span>{relationshipButton}</span>;
   }
 });
