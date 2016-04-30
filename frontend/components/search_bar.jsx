@@ -18,6 +18,7 @@ module.exports = React.createClass({
   },
 
   getUsers: function () {
+    // debugger;
     this.setState({ users: UserStore.all() });
   },
 

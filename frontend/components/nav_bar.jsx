@@ -4,6 +4,7 @@ var ClientActions = require('../actions/client_actions.js');
 var hashHistory = ReactRouter.hashHistory;
 var SearchBar = require('./search_bar');
 var Modal = require("react-modal");
+var UserStore = require("../stores/user_store");
 
 var style = {
   overlay : {
@@ -25,24 +26,32 @@ var style = {
     backgroundColor : '#ffe9ec',
     background      : '#fff',
     outline         : 'none',
-    padding         : '20px',
     opacity         : '0',
     transition      : 'opacity 0.5s'
   }
-}
+};
 
 module.exports = React.createClass({
   getInitialState: function(){
     return({ modalOpen: false });
   },
 
+  // componentDidMount: function () {
+  //   this.navListener = UserStore.addListener(this.rerender);
+  //   // ClientActions.fetchUsers();
+  // },
+  //
+  // rerender: function () {
+  //
+  // },
+
   closeModal: function(){
-    this.setState({ modalOpen: false })
+    this.setState({ modalOpen: false });
     style.content.opacity = 0;
   },
 
   openModal: function(){
-    this.setState({ modalOpen: true })
+    this.setState({ modalOpen: true });
   },
 
   onModalOpen: function() {
@@ -71,6 +80,7 @@ module.exports = React.createClass({
   },
 
   render: function() {
+    // debugger;
     return(
       <div>
         <ul className="navbar-links">
