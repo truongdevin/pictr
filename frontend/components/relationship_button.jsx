@@ -3,23 +3,13 @@ var ClientActions = require('../actions/client_actions.js');
 
 module.exports = React.createClass({
 
-  getInitialState: function() {
-    return {
-      user: this.props.user
-    };
-  },
-
   handleFollow: function(e){
     console.log("Followed!");
     var data = {
       follower_id: JSON.parse(localStorage.getItem('currentUser')).id,
-      followed_id: this.state.user.id
+      followed_id: this.props.user.id
     };
     ClientActions.createRelationship(data);
-  },
-
-  componentWillReceiveProps: function(newProps) {
-    this.setState({user: newProps.user});
   },
 
   handleUnfollow: function(e){
@@ -29,7 +19,7 @@ module.exports = React.createClass({
     var currentUser = JSON.parse(localStorage.getItem('currentUser'));
     currentUser.relationships.forEach(function(relationship){
       // debugger;
-      if (relationship.followed_id === self.state.user.id) {
+      if (relationship.followed_id === self.props.user.id) {
         relationshipId = relationship.id;
       }
     });
@@ -37,7 +27,7 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var user = this.state.user;
+    var user = this.props.user;
     var self = this;
     var relationshipButton = <span onClick={this.handleFollow}>Follow</span>;
     user.followers.forEach(function(follow) {
