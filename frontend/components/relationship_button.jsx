@@ -28,6 +28,7 @@ module.exports = React.createClass({
     var relationshipId;
     var currentUser = JSON.parse(localStorage.getItem('currentUser'));
     currentUser.relationships.forEach(function(relationship){
+      // debugger;
       if (relationship.followed_id === self.state.user.id) {
         relationshipId = relationship.id;
       }

@@ -17,10 +17,13 @@ var resetUsers = function (users) {
 var addRelationship = function(relationship) {
   //find user by relationship.followed_id since thats how the show button logic works.
   // add currentuser.username to the followers.
-
   var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  // debugger;
   var changedUser = _users[relationship.followed_id];
   changedUser.followers.push(currentUser);
+  currentUser.relationships.push(relationship);
+  localStorage.setItem('currentUser', JSON.stringify(currentUser));
+  // debugger;
 };
 
 var removeRelationship = function(relationship) {
