@@ -80,7 +80,6 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    // debugger;
     return(
       <div>
         <ul className="navbar-links">

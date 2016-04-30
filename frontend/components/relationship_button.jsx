@@ -19,7 +19,6 @@ module.exports = React.createClass({
   },
 
   componentWillReceiveProps: function(newProps) {
-    // debugger;
     this.setState({user: newProps.user});
   },
 
