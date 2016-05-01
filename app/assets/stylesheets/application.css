@@ -118,7 +118,6 @@ body {
 }
 
 .navbar-links li:hover {
-  /*background-color: #111;*/
   background-color: #F8F8F8;
   color: lightpink;
   cursor: pointer;

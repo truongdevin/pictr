@@ -1,6 +1,8 @@
 class Api::PostsController < ApplicationController
   def index
+    subquery = Relationship.select("followed_id").where("follower_id = ?", current_user.id)
     @posts = Post.includes(:user, :likes, {comments: :user})
+      .where("user_id IN (#{subquery.to_sql}) OR user_id = ?", current_user.id)
     render :index
   end
 
