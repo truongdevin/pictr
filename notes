@@ -5,6 +5,9 @@ TODO go through everything and fix the N+1 queries. Only fetch data that is used
 
 TODO fix background images
 
+TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO: FIX LIKES. broken button and maybe change logic for checking likes.
+  - currently checks currentuser and matches with post, instead we should check the post and match current user. :)
+
 
 THINGS TO REMEMBER
 -setup models - check

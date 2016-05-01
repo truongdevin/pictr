@@ -4,7 +4,6 @@ var ClientActions = require('../actions/client_actions.js');
 module.exports = React.createClass({
 
   handleFollow: function(e){
-    console.log("Followed!");
     var data = {
       follower_id: JSON.parse(localStorage.getItem('currentUser')).id,
       followed_id: this.props.user.id
@@ -13,7 +12,6 @@ module.exports = React.createClass({
   },
 
   handleUnfollow: function(e){
-    console.log("Unfollowed!");
     var self = this;
     var relationshipId;
     var currentUser = JSON.parse(localStorage.getItem('currentUser'));

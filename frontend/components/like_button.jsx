@@ -4,7 +4,6 @@ var ClientActions = require('../actions/client_actions.js');
 module.exports = React.createClass({
 
   handleLike: function(e){
-    console.log("Liked!");
     var data = {
       user_id: JSON.parse(localStorage.getItem('currentUser')).id,
       post_id: this.props.post.id
@@ -13,25 +12,29 @@ module.exports = React.createClass({
   },
 
   handleUnlike: function(e){
-    console.log("Unliked!");
     var self = this;
+    var post = this.props.post;
     var likeId;
     var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    currentUser.likes.forEach(function(like){
-      if (like.post_id === self.props.post.id) {
+
+    post.likes.forEach(function(like) {
+      if (like.user_id === currentUser.id) {
         likeId = like.id;
       }
     });
+
     ClientActions.deleteLike(likeId);
   },
 
   render: function() {
     var self = this;
     var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    var post = this.props.post;
+
     var likeButton = <div onClick={this.handleLike}>Like</div>;
 
-    currentUser.likes.forEach(function(like){
-      if (like.post_id === self.props.post.id) {
+    post.likes.forEach(function(like) {
+      if (like.user_id === currentUser.id) {
         likeButton = <div onClick={self.handleUnlike}>Unlike</div>;
       }
     });

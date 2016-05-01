@@ -14,14 +14,14 @@ var resetUsers = function (users) {
   });
 };
 
-var addRelationship = function(relationship) {
+var addLike = function(relationship) {
 
   var currentUser = JSON.parse(localStorage.getItem('currentUser'));
   currentUser.relationships.push(relationship);
   localStorage.setItem('currentUser', JSON.stringify(currentUser));
 };
 
-var removeRelationship = function(relationship) {
+var removeLike = function(relationship) {
 
   var currentUser = JSON.parse(localStorage.getItem('currentUser'));
   for (var i=0; i<currentUser.relationships.length; i++) {
@@ -50,10 +50,10 @@ UserStore.__onDispatch = function (payload) {
       resetUsers(payload.users);
       break;
     case PostConstants.RELATIONSHIP_RECEIVED:
-      addRelationship(payload.relationship);
+      addLike(payload.relationship);
       break;
     case PostConstants.RELATIONSHIP_REMOVED:
-      removeRelationship(payload.relationship);
+      removeLike(payload.relationship);
       break;
   }
   this.__emitChange();

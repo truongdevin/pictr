@@ -37,21 +37,14 @@ var removeComment = function (comment) {
 
 var setLike = function(like) {
 
-  var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  currentUser.likes.push(like);
-  localStorage.setItem('currentUser', JSON.stringify(currentUser));
+  // var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  // currentUser.likes.push(like);
+  // localStorage.setItem('currentUser', JSON.stringify(currentUser));
 
   _posts[like.post_id].likes.push(like);
 };
 
 var removeLike = function(like) {
-  var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  for (var i=0; i<currentUser.likes.length; i++) {
-    if (currentUser.likes[i].id === like.id) {
-      currentUser.likes.splice(i,1);
-    }
-  }
-  localStorage.setItem('currentUser', JSON.stringify(currentUser));
 
   var allLikes = _posts[like.post_id].likes.slice();
   var idx;

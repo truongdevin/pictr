@@ -134,6 +134,7 @@ body {
   margin-top: 10px;
   width: 600px;
   border: 1px solid lightgray;
+  border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -143,10 +144,19 @@ body {
   height: auto;
 }
 
+.comments-and-likes {
+  padding: 20px 20px 0 20px;
+}
+
 .comments-box {
-  /*padding: 20px 20px 0 20px;*/
-  padding: 20px;
-  border-bottom: 1px solid lightgray;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid darkgrey;
+}
+
+.likes {
+  font-weight: bold;
+  color: grey;
+  padding: 0 0 10px 5px;
 }
 
 .comment-single {

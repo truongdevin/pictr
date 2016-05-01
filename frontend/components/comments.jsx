@@ -14,8 +14,8 @@ module.exports = React.createClass({
     });
 
     return (
-      <div>
-        <div className="likes">{this.props.post.likes.length} Likes!</div>
+      <div className="comments-and-likes">
+        <div className="likes">{post.likes.length} likes</div>
         <div className="comments-box">{comments}</div>
         <div className="comment-form-and-like-button">
           <LikeButton post={post}/>
