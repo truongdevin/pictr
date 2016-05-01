@@ -39,6 +39,7 @@ module.exports = React.createClass({
   closeModal: function(){
     this.setState({ modalOpen: false });
     style.content.opacity = 0;
+    ClientActions.fetchPosts();
   },
 
   openModal: function(){
