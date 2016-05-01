@@ -98,7 +98,7 @@ body {
 }
 
 .navbar-links {
-  font-size: 18px;
+  font-size: 16px;
   display: flex;
   /*justify-content: space-between;*/
   justify-content: flex-end;
@@ -129,20 +129,28 @@ body {
 }
 
 .individual-post {
-  font-size: 16px;
+  font-size: 14px;
   background-color: white;
   /*margin: auto;*/
   margin: 60px auto;
   width: 600px;
   border: 1px solid lightgray;
   border-radius: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  /*padding-top: 10px;
+  padding-bottom: 10px;*/
 }
 
 .index-photos {
   width: 600px;
   height: auto;
+}
+
+.post-author {
+  /*padding: 10px 20px;*/
+  /*font-weight: bold;*/
+  /*color: #E75480;*/
+  color: navy;
+  padding: 20px;
 }
 
 .comments-and-likes {
@@ -161,29 +169,24 @@ body {
 }
 
 .comment-single {
-  padding: 5px;
+  padding: 3px 5px;
+  /*margin: 5px;*/
 }
 
 .comment-form-box {
-  /*padding: 20px;*/
-  font-size: 16px;
   flex-grow: 2;
 }
 
 .comment-form-textbox {
-  font-size: 16px;
+  font-size: 14px;
   border: 1px solid white;
-  padding: 20px;
+  padding: 25px;
   height: 20px;
   width: 80%;
 }
 
 .comment-form-textbox:focus {
   outline: none;
-}
-
-.comment-form-textbox::-webkit-input-placeholder {
-   font-size: 16px;
 }
 
 .comment-and-delete {

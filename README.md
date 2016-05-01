@@ -132,7 +132,7 @@ Will be implementing drag and drop upload in future.
 **Objective:** Only posts by followed users will display.
 Will insert photos by url. Will be implementing drag and drop upload in future.
 
-- [ ] change the logic regarding which posts are fetched depending on followed
+- [x] change the logic regarding which posts are fetched depending on followed
 
 ### Bonus Features (TBD)
 - [ ] Infinite Scrolling
