@@ -1,6 +1,8 @@
 var React = require('react');
 var CommentForm = require('./comment_form');
 var IndividualComment = require('./individual_comment');
+// var LikeButton = require('./like_button');
+var LikeButton = require('./like_button');
 
 module.exports = React.createClass({
 
@@ -14,7 +16,10 @@ module.exports = React.createClass({
     return (
       <div>
         <div className="comments-box">{comments}</div>
-        <CommentForm post_id={post.id}/>
+        <div className="comment-form-and-like-button">
+          <LikeButton post={post}/>
+          <CommentForm post_id={post.id}/>
+        </div>
       </div>
     );
   }

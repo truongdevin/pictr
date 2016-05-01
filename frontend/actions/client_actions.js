@@ -39,5 +39,13 @@ module.exports = {
 
   deleteRelationship: function(id) {
     ApiUtil.removeRelationship(id);
+  },
+
+  createLike: function(data) {
+    ApiUtil.createLike(data);
+  },
+
+  deleteLike: function(id) {
+    ApiUtil.removeLike(id);
   }
 };

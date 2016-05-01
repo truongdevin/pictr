@@ -12,7 +12,7 @@ var NavBar = require('./components/nav_bar');
 var Index = require('./components/index');
 var Modal = require("react-modal");
 
-// ApiUtil = require('./util/api_util');
+ApiUtil = require('./util/api_util');
 // UserStore = require('./stores/user_store');
 
 

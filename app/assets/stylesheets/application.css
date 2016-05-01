@@ -206,3 +206,15 @@ body {
 .follow-button:hover {
   cursor: pointer;
 }
+
+.comment-form-and-like-button {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.like-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}

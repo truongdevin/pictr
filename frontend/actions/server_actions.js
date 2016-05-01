@@ -49,7 +49,21 @@ module.exports = {
       actionType: PostConstants.RELATIONSHIP_REMOVED,
       relationship: relationship
     });
-  }
+  },
+
+  receiveLike: function (like) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.LIKE_RECEIVED,
+      like: like
+    });
+  },
+
+  removeLike: function (like) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.LIKE_REMOVED,
+      like: like
+    });
+  },
 
 
 };

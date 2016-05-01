@@ -108,4 +108,26 @@ module.exports = {
       }
     });
   },
+
+  createLike: function(data){
+    $.ajax({
+      url: 'api/likes',
+      method: 'POST',
+      data: {like: data},
+      dataType: 'json',
+      success: function(like) {
+        ServerActions.receiveLike(like);
+      }
+    });
+  },
+
+  removeLike: function (id) {
+    $.ajax({
+      url: "api/likes/" + id,
+      type: "DELETE",
+      success: function (like) {
+        ServerActions.removeLike(like);
+      }
+    });
+  }
 };

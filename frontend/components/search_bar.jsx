@@ -1,7 +1,7 @@
 var React = require('react');
 var UserStore = require('../stores/user_store.js');
 var ClientActions = require('../actions/client_actions.js');
-var RelationshipButton = require('./relationship_button');
+var FollowButton = require('./follow_button');
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -40,7 +40,7 @@ module.exports = React.createClass({
       return (
         <ul key={singleUser.id} className="dropdown-content">
           <li>{singleUser.username}</li>
-          <li><RelationshipButton user={singleUser}/></li>
+          <li><FollowButton user={singleUser}/></li>
         </ul>
       );
     });

@@ -35,6 +35,24 @@ var removeComment = function (comment) {
   }
 };
 
+var setLike = function(like) {
+
+  var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  currentUser.likes.push(like);
+  localStorage.setItem('currentUser', JSON.stringify(currentUser));
+};
+
+var removeLike = function(like) {
+
+  var currentUser = JSON.parse(localStorage.getItem('currentUser'));
+  for (var i=0; i<currentUser.likes.length; i++) {
+    if (currentUser.likes[i].id === like.id) {
+      currentUser.likes.splice(i,1);
+    }
+  }
+  localStorage.setItem('currentUser', JSON.stringify(currentUser));
+};
+
 PostStore.all = function () {
   var allPosts = Object.keys(_posts).map(function (postId) {
     return _posts[postId];
@@ -60,6 +78,12 @@ PostStore.__onDispatch = function (payload) {
       break;
     case PostConstants.COMMENT_REMOVED:
       removeComment(payload.comment);
+      break;
+    case PostConstants.LIKE_RECEIVED:
+      setLike(payload.like);
+      break;
+    case PostConstants.LIKE_REMOVED:
+      removeLike(payload.like);
       break;
   }
   this.__emitChange();
