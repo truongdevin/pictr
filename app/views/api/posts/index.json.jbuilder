@@ -1,6 +1,7 @@
 json.array! @posts do |post|
   json.extract! post, :id, :user_id, :image_url, :created_at
   json.user post.user, :username
+  json.likes post.likes, :post_id
 
   json.comments do
     json.array! post.comments do |comment|

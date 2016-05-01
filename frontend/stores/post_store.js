@@ -40,10 +40,11 @@ var setLike = function(like) {
   var currentUser = JSON.parse(localStorage.getItem('currentUser'));
   currentUser.likes.push(like);
   localStorage.setItem('currentUser', JSON.stringify(currentUser));
+
+  _posts[like.post_id].likes.push(like);
 };
 
 var removeLike = function(like) {
-
   var currentUser = JSON.parse(localStorage.getItem('currentUser'));
   for (var i=0; i<currentUser.likes.length; i++) {
     if (currentUser.likes[i].id === like.id) {
@@ -51,6 +52,16 @@ var removeLike = function(like) {
     }
   }
   localStorage.setItem('currentUser', JSON.stringify(currentUser));
+
+  var allLikes = _posts[like.post_id].likes.slice();
+  var idx;
+  for (var i=0; i<allLikes.length ; i++) {
+    if (allLikes[i].id === like.id) {
+      idx = i;
+      allLikes.splice(idx,1);
+    }
+    _posts[like.post_id].likes = allLikes;
+  }
 };
 
 PostStore.all = function () {

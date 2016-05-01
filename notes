@@ -1,11 +1,8 @@
 TODO post json.jbuilder. do we need user_id in posts?
-TODO json.builder. need to implement likes + comments for posts
-TODO json.jbuilder. need to implement followers + following for users
 TODO api::comments_controller. may need to implement an index for the user show page.
 TODO api::users_controlelr, N+1 query still
 TODO go through everything and fix the N+1 queries. Only fetch data that is used.
 
-TODO fix errors on sign in. should display NOT ON TOP LEFT CORNER!
 TODO fix background images
 
 
