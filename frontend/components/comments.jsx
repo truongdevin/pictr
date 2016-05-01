@@ -12,10 +12,23 @@ module.exports = React.createClass({
         <IndividualComment key={comment.id} comment={comment}/>
       );
     });
+    
+    var likes;
+    switch (post.likes.length) {
+      case (0):
+        likes = "";
+        break;
+      case (1):
+        likes = <div className="likes">{post.likes.length} like</div>;
+        break;
+      default:
+        likes = <div className="likes">{post.likes.length} likes</div>;
+        break;
+    }
 
     return (
       <div className="comments-and-likes">
-        <div className="likes">{post.likes.length} likes</div>
+        {likes}
         <div className="comments-box">{comments}</div>
         <div className="comment-form-and-like-button">
           <LikeButton post={post}/>
