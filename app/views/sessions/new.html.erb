@@ -1,6 +1,9 @@
 <div class="auth-container">
+  <div class="error"><%= render "layouts/errors" %></div>
+
   <form class="auth-form" action="<%= session_url %>" method="post">
     <h2>Sign In</h2>
+    <br/>
     <%= auth_token_input %>
 
     <input type="text" name="user[username]" class="username" placeholder="Username">

@@ -1,6 +1,9 @@
 <div class="auth-container">
+  <div class="error"><%= render "layouts/errors" %></div>
+
   <form class="auth-form" action="<%= users_url %>" method="post">
     <h2>Sign Up</h2>
+    <br/>
     <%= auth_token_input %>
 
 
