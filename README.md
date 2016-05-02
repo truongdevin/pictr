@@ -63,7 +63,7 @@ Will be implementing drag and drop upload in future.
 - [x] setup the flux loop with skeleton files
 - [x] setup React Router
 - implement each post component, building out the flux loop as needed.
-  - [ ] `PictureHeader`, shows poster name and time upload time
+  - [x] `PictureHeader`, shows poster name.
   - [x] `Picture`
   - [x] `CommentBox`, leave empty for now.
 
