@@ -29,7 +29,7 @@ module.exports = React.createClass({
     var allUsers = this.state.users,
       searchString = this.state.searchString.trim().toLowerCase();
 
-    var currentUser = JSON.parse(localStorage.getItem('currentUser'))
+    var currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
     allUsers = allUsers.filter(function(singleUser){
       if (singleUser.username === currentUser.username) {
