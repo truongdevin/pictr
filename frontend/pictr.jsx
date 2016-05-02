@@ -13,8 +13,8 @@ var Index = require('./components/index');
 var Modal = require("react-modal");
 var UserShow = require('./components/user_show');
 
-ApiUtil = require('./util/api_util');
-UserStore = require('./stores/user_store');
+// ApiUtil = require('./util/api_util');
+// UserStore = require('./stores/user_store');
 
 
 var App = React.createClass({

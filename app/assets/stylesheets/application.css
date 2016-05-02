@@ -272,3 +272,17 @@ body {
   justify-content: center;
   width: 50px;
 }
+
+.user-photos {
+  width: auto;
+  height: 250px;
+  margin: 3px;
+}
+
+.user-photos-container {
+  display: flex;
+  flex-wrap: wrap;
+  /*align-items: center;*/
+  /*align-content: flex-start;*/
+
+}

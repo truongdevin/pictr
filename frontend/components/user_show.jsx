@@ -8,7 +8,6 @@ module.exports = React.createClass({
       username: [],
       full_name: [],
       posts: []
-      // user: UserStore.find(JSON.parse(this.props.params.userId))
     };
   },
 
@@ -35,7 +34,7 @@ module.exports = React.createClass({
       return <img key={post.id} className="user-photos" src={post.image_url}/>;
     });
     return (
-      <div>{posts}</div>
+      <div className="user-photos-container">{posts}</div>
     );
   }
 });
