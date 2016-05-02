@@ -8,6 +8,12 @@ module.exports = React.createClass({
     ClientActions.deleteComment(this.props.comment.id);
   },
 
+  redirectUser: function(e) {
+    var userId = this.props.comment.user.id;
+    var url = "/users/"+userId;
+    console.log("redirect to "+url);
+  },
+
   render: function () {
     var comment = this.props.comment;
     var deleteButton = "";
@@ -18,7 +24,10 @@ module.exports = React.createClass({
 
     return (
       <div className="comment-and-delete">
-        <div className="comment-single">{comment.user.username}: {comment.body}</div>
+        <div className="comment-single">
+          <span className="user-link" onClick={this.redirectUser}>{comment.user.username}</span>
+          : {comment.body}
+        </div>
         {deleteButton}
       </div>
     );

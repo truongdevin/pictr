@@ -20,6 +20,7 @@ var setPost = function (post) {
 };
 
 var setComment = function (comment) {
+  debugger;
   _posts[comment.post_id].comments.push(comment);
 };
 

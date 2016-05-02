@@ -7,7 +7,7 @@ json.array! @posts do |post|
     json.array! post.comments do |comment|
       json.body comment.body
       json.id comment.id
-      json.user comment.user, :username
+      json.user comment.user, :username, :id
     end
   end
 end

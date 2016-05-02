@@ -173,6 +173,10 @@ body {
   /*margin: 5px;*/
 }
 
+.user-link {
+  color: darkred;
+}
+
 .comment-form-box {
   flex-grow: 2;
 }
