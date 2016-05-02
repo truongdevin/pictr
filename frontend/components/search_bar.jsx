@@ -2,6 +2,9 @@ var React = require('react');
 var UserStore = require('../stores/user_store.js');
 var ClientActions = require('../actions/client_actions.js');
 var FollowButton = require('./follow_button');
+var hashHistory = require('react-router').hashHistory;
+
+var SearchItem = require('./search_item');
 
 module.exports = React.createClass({
   getInitialState: function () {
@@ -43,11 +46,11 @@ module.exports = React.createClass({
         return singleUser.username.toLowerCase().match(searchString);
       });
     }
-
+    var self = this;
     var dropdownContent = allUsers.map(function(singleUser){
       return (
         <ul key={singleUser.id} className="dropdown-content">
-          <li>{singleUser.username}</li>
+          <SearchItem user={singleUser} callback={self.props.callback}/>
           <li><FollowButton user={singleUser}/></li>
         </ul>
       );

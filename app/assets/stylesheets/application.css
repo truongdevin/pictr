@@ -261,6 +261,19 @@ body {
   cursor: pointer;
 }
 
+.search-item {
+  padding: 10px 0px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.search-item:hover {
+  cursor: pointer;
+}
+
 .comment-form-and-like-button {
   display: flex;
   justify-content: flex-start;

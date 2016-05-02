@@ -36,11 +36,6 @@ var removeComment = function (comment) {
 };
 
 var setLike = function(like) {
-
-  // var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  // currentUser.likes.push(like);
-  // localStorage.setItem('currentUser', JSON.stringify(currentUser));
-
   _posts[like.post_id].likes.push(like);
 };
 

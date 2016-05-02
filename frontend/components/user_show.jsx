@@ -13,19 +13,17 @@ module.exports = React.createClass({
 
   componentDidMount: function() {
     this.userListener = UserStore.addListener(this.fetchUser);
-    // ClientActions.fetchUser(JSON.parse(this.props.params.userId));
     ClientActions.fetchUsers();
   },
 
   componentWillUnmount: function () {
     this.userListener.remove();
-    // this.userPropListener.remove();
   },
 
-  componentWillReceiveProps: function(prop) {
-    this.userListener = UserStore.addListener(this.fetchUser);
-    ClientActions.fetchUser(JSON.parse(prop.params.userId));
-  },
+  // componentWillReceiveProps: function(prop) {
+  //   this.userListener = UserStore.addListener(this.fetchUser);
+  //   ClientActions.fetchUser(JSON.parse(prop.params.userId));
+  // },
 
   fetchUser: function () {
     var user = UserStore.find(JSON.parse(this.props.params.userId));

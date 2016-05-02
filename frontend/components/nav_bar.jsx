@@ -87,7 +87,7 @@ module.exports = React.createClass({
           onAfterOpen={this.onModalOpen}
 
           onRequestClose={this.closeModal}>
-          <SearchBar/>
+          <SearchBar callback={this.closeModal}/>
         </Modal>
 
       </div>
