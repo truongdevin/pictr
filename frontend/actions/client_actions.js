@@ -33,6 +33,10 @@ module.exports = {
     ApiUtil.fetchUsers();
   },
 
+  fetchUser: function(id) {
+    ApiUtil.fetchUser(id);
+  },
+
   createRelationship: function(data) {
     ApiUtil.createRelationship(data);
   },

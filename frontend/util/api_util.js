@@ -87,6 +87,16 @@ module.exports = {
     });
   },
 
+  fetchUser: function(id){
+    $.ajax({
+      url: 'api/users/'+id,
+      method: 'GET',
+      success: function(user) {
+        ServerActions.receiveUser(user);
+      }
+    });
+  },
+
   createRelationship: function(data){
     $.ajax({
       url: 'api/relationships',
@@ -94,7 +104,7 @@ module.exports = {
       data: {relationship: data},
       dataType: 'json',
       success: function(relationship) {
-        console.log("Followed!")
+        console.log("Followed!");
         ServerActions.receiveRelationship(relationship);
       }
     });

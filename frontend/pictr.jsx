@@ -11,9 +11,10 @@ var ClientActions = require('./actions/client_actions');
 var NavBar = require('./components/nav_bar');
 var Index = require('./components/index');
 var Modal = require("react-modal");
+var UserShow = require('./components/user_show');
 
 ApiUtil = require('./util/api_util');
-// UserStore = require('./stores/user_store');
+UserStore = require('./stores/user_store');
 
 
 var App = React.createClass({
@@ -34,6 +35,7 @@ var routes = (
   <Route path="/" component={App}>
     <IndexRoute component={Index} />
     <Route path="posts" component={Index} />
+    <Route path="users/:userId" component={UserShow} />
   </Route>
 );
 

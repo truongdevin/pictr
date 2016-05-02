@@ -37,6 +37,13 @@ module.exports = {
     });
   },
 
+  receiveUser: function(user) {
+    AppDispatcher.dispatch({
+      actionType: PostConstants.USER_RECEIVED,
+      user: user
+    });
+  },
+
   receiveRelationship: function (relationship) {
     AppDispatcher.dispatch({
       actionType: PostConstants.RELATIONSHIP_RECEIVED,

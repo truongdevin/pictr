@@ -14,6 +14,10 @@ var resetUsers = function (users) {
   });
 };
 
+var setUser = function (user) {
+  _users[user.id] = user;
+};
+
 var addLike = function(relationship) {
 
   var currentUser = JSON.parse(localStorage.getItem('currentUser'));
@@ -48,6 +52,9 @@ UserStore.__onDispatch = function (payload) {
   switch (payload.actionType) {
     case PostConstants.USERS_RECEIVED:
       resetUsers(payload.users);
+      break;
+    case PostConstants.USER_RECEIVED:
+      setUser(payload.user);
       break;
     case PostConstants.RELATIONSHIP_RECEIVED:
       addLike(payload.relationship);

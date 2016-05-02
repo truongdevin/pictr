@@ -1,5 +1,6 @@
 var React = require('react');
 var ClientActions = require('../actions/client_actions');
+var hashHistory = require('react-router').hashHistory;
 
 module.exports = React.createClass({
 
@@ -11,7 +12,7 @@ module.exports = React.createClass({
   redirectUser: function(e) {
     var userId = this.props.comment.user.id;
     var url = "/users/"+userId;
-    console.log("redirect to "+url);
+    hashHistory.push(url);
   },
 
   render: function () {
