@@ -1,17 +1,10 @@
 TODO post json.jbuilder. do we need user_id in posts?
-TODO api::comments_controller. may need to implement an index for the user show page.
-TODO api::users_controlelr, N+1 query still
 TODO go through everything and fix the N+1 queries. Only fetch data that is used.
 
 TODO fix background images
+TODO fix color scheme and css garbage
 
-
-
-THINGS TO REMEMBER
--setup models - check
--setup associations - check
--setup routes - check
--setup controllers - check
+TODO at night. infinite scrolling. css. 
 
 NOTES
 -had trouble with Sign out Button. It would throw an error but on refresh it would sign you out.
@@ -27,5 +20,3 @@ NOTES
     client action which calls api_utils#fetchCurrentUser which accesses the database to grab the current user
     and set them inside a localStorage("currentUser", JSON.stringify(user)).
     - to access the user. do JSON.parse(localStorage.getItem("currentUser")).id
-
-- FUCK FOLLOW/UNFOLLOW!

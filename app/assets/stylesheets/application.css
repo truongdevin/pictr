@@ -142,6 +142,7 @@ body {
 
 .index-photos {
   width: 600px;
+  /*max-height: 600px;*/
   height: auto;
 }
 
@@ -295,7 +296,32 @@ body {
 .user-photos-container {
   display: flex;
   flex-wrap: wrap;
-  /*align-items: center;*/
-  /*align-content: flex-start;*/
+}
 
+.user-show-followers {
+  width: 600px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.user-show-followers div {
+  color: grey;
+  padding: 10px 10px 10px 0px;
+}
+
+.user-show-stats-container {
+  /*background-color: maroon;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*height: 100px;*/
+  padding: 20px 75px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  border-bottom: 1px solid grey;
+}
+
+.user-show-username {
+  font-size: 20px;
+  margin: 20px 0px;
 }

@@ -58,6 +58,17 @@ module.exports = React.createClass({
     ClientActions.signOut();
   },
 
+  handleProfile: function() {
+    var userId = JSON.parse(localStorage.getItem('currentUser')).id;
+    var url = "/users/"+userId;
+    // debugger;
+    hashHistory.push('/');
+
+    if (!location.hash.includes(url)) {
+      hashHistory.push(url);
+    }
+  },
+
   upload: function (e) {
     e.preventDefault();
     cloudinary.openUploadWidget(CLOUDINARY_OPTIONS, function(error, results){
@@ -78,7 +89,7 @@ module.exports = React.createClass({
           <li className="home-button" onClick={this.handleHome}>Pictr</li>
           <li onClick={this.openModal}>Search</li>
           <li onClick={this.upload}>Upload</li>
-          <li>Profile</li>
+          <li onClick={this.handleProfile}>Profile</li>
           <li onClick={this.handleSignOut}>Sign Out </li>
         </ul>
         <Modal
