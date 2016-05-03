@@ -19,21 +19,19 @@ var setUser = function (user) {
 };
 
 var addLike = function(relationship) {
-
-  var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  currentUser.relationships.push(relationship);
-  localStorage.setItem('currentUser', JSON.stringify(currentUser));
+  var user = UserStore.find(relationship.follower_id);
+  user.relationships.push(relationship);
 };
 
 var removeLike = function(relationship) {
-
-  var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-  for (var i=0; i<currentUser.relationships.length; i++) {
-    if (currentUser.relationships[i].id === relationship.id) {
-      currentUser.relationships.splice(i,1);
+  var user = UserStore.find(relationship.follower_id);
+  var dupedRelationships = user.relationships.slice();
+  for (var i=0; i<dupedRelationships.length; i++) {
+    if (dupedRelationships[i].id === relationship.id) {
+      dupedRelationships.splice(i,1);
     }
   }
-  localStorage.setItem('currentUser', JSON.stringify(currentUser));
+  user.relationships = dupedRelationships;
 };
 
 var setPost = function(post) {

@@ -23,16 +23,13 @@ module.exports = React.createClass({
     this.userListener.remove();
   },
 
-  //enabling this allows profile button on show page, but leads to console errors..
   componentWillReceiveProps: function (prop) {
-    // this.userProfileListener = UserStore.addListener(this.fetchUser);
     this.userListener.remove();
     this.userListener = UserStore.addListener(this.fetchUser);
     ClientActions.fetchUsers();
   },
 
   fetchUser: function () {
-    // debugger; IT ISNT UPDATING!!!
     var user = UserStore.find(JSON.parse(this.props.params.userId));
     this.setState({
       username: user.username,

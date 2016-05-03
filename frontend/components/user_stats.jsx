@@ -13,7 +13,7 @@ module.exports = React.createClass({
         <div>{user.full_name}</div>
         <div className="user-show-followers">
           <div>{user.followers.length} followers</div>
-          <div>{user.followed_users.length} following</div>
+          <div>{user.relationships.length} following</div>
         </div>
     </div>
     );
