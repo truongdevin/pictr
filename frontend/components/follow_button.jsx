@@ -18,9 +18,9 @@ module.exports = React.createClass({
     var followerId = JSON.parse(localStorage.getItem('currentUser')).id;
     var currentUser = UserStore.find(followerId);
 
-    currentUser.relationships.forEach(function(relationship){
-      if (relationship.followed_id === self.props.user.id) {
-        relationshipId = relationship.id;
+    currentUser.followed_users.forEach(function(followed_user){
+      if (followed_user.followed_id === self.props.user.id) {
+        relationshipId = followed_user.id;
       }
     });
 
@@ -32,14 +32,14 @@ module.exports = React.createClass({
     var self = this;
     var followerId = JSON.parse(localStorage.getItem('currentUser')).id;
     var currentUser = UserStore.find(followerId);
-    var relationshipButton = <div className="follow-button" onClick={this.handleFollow}>Follow</div>;
+    var followButton = <div className="follow-button" onClick={this.handleFollow}>Follow</div>;
 
-    currentUser.relationships.forEach(function(relationship){
-      if (relationship.followed_id === user.id) {
-        relationshipButton = <div className="follow-button" onClick={self.handleUnfollow}>Unfollow</div>;
+    currentUser.followed_users.forEach(function(followed_user){
+      if (followed_user.followed_id === user.id) {
+        followButton = <div className="follow-button" onClick={self.handleUnfollow}>Unfollow</div>;
       }
     });
 
-    return <div>{relationshipButton}</div>;
+    return <div>{followButton}</div>;
   }
 });

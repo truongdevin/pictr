@@ -20,18 +20,18 @@ var setUser = function (user) {
 
 var addLike = function(relationship) {
   var user = UserStore.find(relationship.follower_id);
-  user.relationships.push(relationship);
+  user.followed_users.push(relationship);
 };
 
 var removeLike = function(relationship) {
   var user = UserStore.find(relationship.follower_id);
-  var dupedRelationships = user.relationships.slice();
-  for (var i=0; i<dupedRelationships.length; i++) {
-    if (dupedRelationships[i].id === relationship.id) {
-      dupedRelationships.splice(i,1);
+  var dupedFollowedUsers = user.followed_users.slice();
+  for (var i=0; i<dupedFollowedUsers.length; i++) {
+    if (dupedFollowedUsers[i].id === relationship.id) {
+      dupedFollowedUsers.splice(i,1);
     }
   }
-  user.relationships = dupedRelationships;
+  user.followed_users = dupedFollowedUsers;
 };
 
 var setPost = function(post) {
