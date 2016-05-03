@@ -2,10 +2,11 @@ json.array! @users do |user|
   json.extract! user, :id, :username, :full_name
   json.posts user.posts, :image_url, :id
   json.relationships user.relationships, :followed_id, :id
+  json.reverse_relationships user.reverse_relationships, :follower_id
 
 
   # json.followed_users user.followed_users, :username
-  json.followers user.followers, :username
+  # json.followers user.followers, :username
 
 
   # long way below

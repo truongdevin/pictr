@@ -12,7 +12,7 @@ module.exports = React.createClass({
         <div className="user-show-username">{user.username}</div>
         <div>{user.full_name}</div>
         <div className="user-show-followers">
-          <div>{user.followers.length} followers</div>
+          <div>{user.reverse_relationships.length} followers</div>
           <div>{user.relationships.length} following</div>
         </div>
     </div>
