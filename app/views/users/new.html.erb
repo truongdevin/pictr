@@ -1,33 +1,33 @@
-<div class="auth-container">
-  <div class="error"><%= render "layouts/errors" %></div>
+<div class="auth-wrapper">
+  <div class="auth-container">
+    <div class="error"><%= render "layouts/errors" %></div>
 
-  <form class="auth-form" action="<%= users_url %>" method="post">
-    <h2>Sign Up</h2>
-    <br/>
-    <%= auth_token_input %>
+    <form class="auth-form" action="<%= users_url %>" method="post">
+      <h2>Sign Up</h2>
+      <br/>
+      <%= auth_token_input %>
 
+      <input type="text" name="user[full_name]" placeholder="Full Name">
 
-    <input type="text" name="user[full_name]" placeholder="Full Name">
+      <br/>
+      <br/>
 
-    <br/>
-    <br/>
+      <input type="text" name="user[username]" placeholder="Username">
 
-    <input type="text" name="user[username]" placeholder="Username">
+      <br/>
+      <br/>
 
-    <br/>
-    <br/>
+      <input type="password" name="user[password]" placeholder="Password">
 
-    <input type="password" name="user[password]" placeholder="Password">
+      <br/>
+      <br/>
 
-    <br/>
-    <br/>
+      <input type="submit" value="Sign Up">
 
-    <input type="submit" value="Sign Up">
+      <br/>
+      <br/>
 
-    <br/>
-    <br/>
-
-    <div> Have an account? <%= link_to "Log in", new_session_url%> </div>
-  </form>
-
+      <div> Have an account? <%= link_to "Log in", new_session_url%> </div>
+    </form>
+  </div>
 </div>

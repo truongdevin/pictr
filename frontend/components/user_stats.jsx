@@ -10,7 +10,7 @@ module.exports = React.createClass({
     return (
       <div className="user-show-stats-container">
         <div className="user-show-username">{user.username}</div>
-        <div>{user.full_name}</div>
+        <div className="user-show-full-name">{user.full_name}</div>
         <div className="user-show-followers">
           <div>{user.followers.length} followers</div>
           <div>{user.followed_users.length} following</div>
