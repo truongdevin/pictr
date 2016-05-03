@@ -36,6 +36,11 @@ var removeLike = function(relationship) {
   localStorage.setItem('currentUser', JSON.stringify(currentUser));
 };
 
+var setPost = function(post) {
+  var user = UserStore.find(post.user_id)
+  user.posts.push(post);
+}
+
 UserStore.all = function () {
   var allUsers = Object.keys(_users).map(function (userId) {
     return _users[userId];
@@ -61,6 +66,9 @@ UserStore.__onDispatch = function (payload) {
       break;
     case PostConstants.RELATIONSHIP_REMOVED:
       removeLike(payload.relationship);
+      break;
+    case PostConstants.POST_RECEIVED:
+      setPost(payload.post);
       break;
   }
   this.__emitChange();

@@ -61,12 +61,7 @@ module.exports = React.createClass({
   handleProfile: function() {
     var userId = JSON.parse(localStorage.getItem('currentUser')).id;
     var url = "/users/"+userId;
-    // debugger;
-    hashHistory.push('/');
-
-    if (!location.hash.includes(url)) {
-      hashHistory.push(url);
-    }
+    hashHistory.push(url);
   },
 
   upload: function (e) {

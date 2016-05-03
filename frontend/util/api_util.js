@@ -18,6 +18,7 @@ module.exports = {
       method: 'POST',
       data: {post: data},
       success: function(post) {
+        console.log("created post!")
         ServerActions.receivePost(post);
       }
     });
