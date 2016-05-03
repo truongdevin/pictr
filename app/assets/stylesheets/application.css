@@ -45,11 +45,16 @@ body {
 }
 
 * {
-  font-family: sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 
 body {
-  background-color: #F8F8F8;
+  /*background-color: #F8F8F8;*/
+  /*background-color: #fcf5f8;*/
+  /*background-color: #fffafc;*/
+  /*background-color: #fff5f5;*/
+  background-color: snow;
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -100,13 +105,14 @@ body {
 .navbar-links {
   font-size: 16px;
   display: flex;
-  /*justify-content: space-between;*/
   justify-content: flex-end;
   margin: 0;
   padding: 0;
   /*background-color: #333;*/
-  background-color: lightpink;
-  color: white;
+  /*background-color: lightpink;*/
+  background-color: white;
+  /*color: #d31f28;*/
+  color: #ff8080;
 }
 
 .home-button {
@@ -118,8 +124,15 @@ body {
 }
 
 .navbar-links li:hover {
-  background-color: #F8F8F8;
-  color: lightpink;
+  /*background-color: #F8F8F8;
+  color: lightpink;*/
+  /*background-color: #d31f28;*/
+  background-color: #ff8080;
+  color: white;
+
+  /*background-color: white;
+  color: #d31f28;*/
+
   cursor: pointer;
   transition: 0.3s;
 }
@@ -175,7 +188,10 @@ body {
 }
 
 .user-link {
-  color: darkred;
+  /*color: darkred;*/
+  /*color: #d31f28;*/
+  color: #ff8080;
+  font-weight: bold;
 }
 
 .comment-form-box {
@@ -235,8 +251,10 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0px 0px 0px 20px;
-  background-color: white;
-  color: lightpink;
+  /*background-color: white;*/
+  background-color: snow;
+  /*color: #d31f28;*/
+  color: #ff8080;
   margin: 10px 0;
   position: relative;
   z-index: 1;
@@ -248,8 +266,9 @@ body {
   background-color: white;
   text-align: center;
   width: 110px;
-  padding: 10px 0px;
-  border-left: 5px solid #ffe9ec;
+  padding: 3px 0px;
+  border: 2px solid #ff8080;
+  border-radius: 5px;
 
   -moz-user-select: -moz-none;
   -khtml-user-select: none;
@@ -260,6 +279,32 @@ body {
 
 .follow-button:hover {
   cursor: pointer;
+  background-color: #ff8080;
+  color: white;
+  transition: 0.3s;
+}
+
+.unfollow-button {
+  background-color: #ff8080;
+  text-align: center;
+  width: 110px;
+  padding: 3px 0px;
+  border: 2px solid #ff8080;
+  border-radius: 5px;
+  color: white;
+
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.unfollow-button:hover {
+  background-color: white;
+  cursor: pointer;
+  color: #ff8080;
+  transition: 0.3s;
 }
 
 .search-item {

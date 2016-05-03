@@ -23,11 +23,12 @@ var style = {
     bottom          : '20%',
     border          : '1px solid #ccc',
     padding         : '20px',
-    backgroundColor : '#ffe9ec',
+    backgroundColor : 'snow',
     background      : '#fff',
     outline         : 'none',
     opacity         : '0',
-    transition      : 'opacity 0.5s'
+    transition      : 'opacity 0.5s',
+    borderRadius    : '15px'
   }
 };
 

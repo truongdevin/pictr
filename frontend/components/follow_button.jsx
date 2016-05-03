@@ -36,7 +36,7 @@ module.exports = React.createClass({
 
     currentUser.followed_users.forEach(function(followed_user){
       if (followed_user.followed_id === user.id) {
-        followButton = <div className="follow-button" onClick={self.handleUnfollow}>Unfollow</div>;
+        followButton = <div className="unfollow-button" onClick={self.handleUnfollow}>Followed</div>;
       }
     });
 
