@@ -27,7 +27,7 @@ module.exports = React.createClass({
       <div className="comment-and-delete">
         <div className="comment-single">
           <span className="user-link" onClick={this.redirectUser}>{comment.user.username}</span>
-          : {comment.body}
+           &nbsp; {comment.body}
         </div>
         {deleteButton}
       </div>
