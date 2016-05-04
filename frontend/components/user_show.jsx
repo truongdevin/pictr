@@ -41,7 +41,9 @@ module.exports = React.createClass({
 
   render: function() {
     var posts = this.state.posts.map(function(post){
-      return <img key={post.id} className="user-photos" src={post.image_url}/>;
+      var idx = post.image_url.indexOf('upload')+6;
+      var url = post.image_url.slice(0,idx)+"/w_600"+post.image_url.slice(idx)
+      return <img key={post.id} className="user-photos" src={url}/>;
     });
     return (
       <div>

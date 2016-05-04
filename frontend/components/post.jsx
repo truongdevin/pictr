@@ -31,13 +31,16 @@ module.exports = React.createClass({
       age = age.replace(" week", "w");
     }
 
+    var idx = post.image_url.indexOf('upload')+6;
+    var url = post.image_url.slice(0,idx)+"/w_600"+post.image_url.slice(idx)
+
     return(
       <div className="individual-post">
         <div className="post-author">
           <span className="user-link" onClick={this.redirectUser}>{post.user.username}</span>
           <span className="age">{age}</span>
         </div>
-        <img className="index-photos" src={post.image_url}/>
+        <img className="index-photos" src={url}/>
         <Comments post={post}/>
       </div>
     );
