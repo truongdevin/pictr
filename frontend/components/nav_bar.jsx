@@ -18,9 +18,9 @@ var style = {
   content : {
     position        : 'fixed',
     top             : '20%',
-    left            : '25%',
-    right           : '25%',
+    width           : '500px',
     bottom          : '20%',
+    margin          : '0 auto',
     border          : '1px solid #ccc',
     padding         : '20px',
     backgroundColor : 'snow',

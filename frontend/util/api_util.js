@@ -8,7 +8,10 @@ module.exports = {
       success: function(posts) {
         ServerActions.receiveAll(posts);
       },
-      dataType: 'json'
+      error: function() {
+        localStorage.clear();
+        window.location = "session/new";
+      }
     });
   },
 
@@ -18,7 +21,7 @@ module.exports = {
       method: 'POST',
       data: {post: data},
       success: function(post) {
-        console.log("created post!")
+        console.log("created post!");
         ServerActions.receivePost(post);
       }
     });
