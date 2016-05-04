@@ -13,7 +13,7 @@ Pictr is a web application inspired by Instagram/Flickr that will be build using
 - [x] Create and delete comments on photos
 - [x] Follow users
 - [x] Like photos
-- [ ] Browse a CSS styled website that is satisfactorily visually appealing
+- [x] Browse a CSS styled website that is satisfactorily visually appealing
 
 
 ## Design Docs
@@ -136,9 +136,9 @@ Will insert photos by url. Will be implementing drag and drop upload in future.
 
 ### Bonus Features (TBD)
 - [ ] Infinite Scrolling
-- [ ] Show user page when clicking their names from front page
+- [x] Show user page when clicking their names from front page
 - [ ] Clicking photos in a user page brings up modal with photo, comments, and likes
-- [ ] Add time stamps to photos
+- [x] Add time stamps to photos
 - [ ] Allow upload of profile picture
 
 [phase-one]: ./docs/phases/phase1.md
