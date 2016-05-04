@@ -4,13 +4,13 @@
     <div class="error"><%= render "layouts/errors" %></div>
 
     <form class="auth-form" action="<%= session_url %>" method="post">
-      <h2>Sign In</h2>
+      <h2>Pictr</h2>
       <%= auth_token_input %>
       <input class="auth-input" id="username" type="text" name="user[username]" class="username" placeholder="Username">
       <input class="auth-input" id="password" type="password" name="user[password]" class="password" placeholder="Password">
       <input class="auth-button" type="submit" value="Log In">
       <button class="auth-button" id="button" type="button" name="button">Guest</button>
-      <div> Don't have an account? <%= link_to "Sign up", new_user_url%> </div>
+      <div class="auth-other"> Don't have an account? <span><%= link_to "Sign up", new_user_url%></span> </div>
     </form>
   </div>
 </div>

@@ -87,12 +87,11 @@ body {
 
   position: relative;
   z-index: 1;
-  background: #FFFFFF;
-  opacity: 0.8;
+  background: rgba(255, 255, 255, 0.8);
   max-width: 300px;
   margin: auto;
   margin-top: 15%;
-  padding: 45px;
+  padding: 30px 45px 45px 45px;
   text-align: center;
   border: 1px solid lightgrey;
   border-radius: 5px;
@@ -101,7 +100,8 @@ body {
 
 .auth-input {
   outline: 0;
-  background: #f2f2f2;
+  /*background: #f2f2f2;*/
+  background: white;
   width: 80%;
   border: 0;
   padding: 10px;
@@ -121,13 +121,32 @@ body {
   margin-top: 10px;
   background-color: #ff8080;
   color: white;
-  /*border-top: 1px solid black;*/
+}
+
+.auth-button:hover {
+  cursor: pointer;
+}
+
+.auth-other {
+  padding: 15px;
+}
+
+.auth-other span {
+  color: #ff8080;
+}
+
+.auth-container h2 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #ff8080;
+  margin-bottom: 10px;
 }
 
 .error {
   font-size: 16px;
   text-align: center;
   color: red;
+  margin-bottom: 20px;
   /*vertical-align: middle;*/
 }
 
@@ -193,11 +212,11 @@ body {
 }
 
 .post-author {
-  /*padding: 10px 20px;*/
-  /*font-weight: bold;*/
-  /*color: #E75480;*/
-  color: navy;
   padding: 20px;
+}
+
+.post-author .user-link {
+  font-size: 16px;
 }
 
 .comments-and-likes {
