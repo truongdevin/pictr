@@ -129,6 +129,7 @@ body {
 
 .auth-other {
   padding: 15px;
+  font-size: 16px;
 }
 
 .auth-other span {
@@ -212,7 +213,14 @@ body {
 }
 
 .post-author {
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
+}
+
+.age {
+  font-weight: bold;
+  color: lightgrey;
 }
 
 .post-author .user-link {

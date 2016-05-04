@@ -34,9 +34,12 @@ var removeLike = function(relationship) {
   user.followed_users = dupedFollowedUsers;
 };
 
+
 var setPost = function(post) {
-  var user = UserStore.find(post.user_id)
-  user.posts.push(post);
+  if (location.hash.includes("/users/")) {
+    var user = UserStore.find(post.user_id);
+    user.posts.push(post);
+  }
 }
 
 UserStore.all = function () {
