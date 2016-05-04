@@ -31,11 +31,11 @@ module.exports = React.createClass({
     var currentUser = JSON.parse(localStorage.getItem('currentUser'));
     var post = this.props.post;
 
-    var likeButton = <div onClick={this.handleLike}>Like</div>;
+    var likeButton = <i id="unfilled" onClick={this.handleLike} className="fa fa-birthday-cake fa-2x"></i>;
 
     post.likes.forEach(function(like) {
       if (like.user_id === currentUser.id) {
-        likeButton = <div onClick={self.handleUnlike}>Unlike</div>;
+        likeButton = <i id="filled" onClick={self.handleUnlike} className="fa fa-birthday-cake fa-2x"></i>;
       }
     });
 

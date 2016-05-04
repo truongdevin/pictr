@@ -396,6 +396,15 @@ body {
   width: 50px;
 }
 
+.like-container #filled {
+  /*color: burlywood;*/
+  color: #ff8080;
+}
+
+.like-container #unfilled {
+  color: lightgrey;
+}
+
 .user-photos {
   width: auto;
   height: 250px;
