@@ -397,7 +397,6 @@ body {
 }
 
 .like-container #filled {
-  /*color: burlywood;*/
   color: #ff8080;
 }
 
@@ -405,10 +404,18 @@ body {
   color: lightgrey;
 }
 
+.like-container:hover {
+  cursor: pointer;
+}
+
 .user-photos {
   width: auto;
   height: 250px;
   margin: 20px 0 0 20px;
+}
+
+.user-photos:hover {
+  cursor: pointer;
 }
 
 .user-photos-container {
