@@ -193,6 +193,23 @@ body {
   float: left;
 }
 
+.welcome {
+  font-size: 20px;
+  text-align: center;
+  width: 600px;
+  margin: 60px auto;
+  border: 1px solid lightgray;
+  border-radius: 15px;
+  padding: 30px;
+  box-sizing: border-box;
+  background-color: white;
+  color: #ff8080;
+}
+
+.welcome h2 {
+  font-size: 26px;
+}
+
 .individual-post {
   font-size: 14px;
   background-color: white;
