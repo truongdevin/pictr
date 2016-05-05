@@ -4,7 +4,9 @@ TODO go through everything and fix the N+1 queries. Only fetch data that is used
 TODO fix background images
 TODO fix color scheme and css garbage
 
-TODO at night. infinite scrolling. css. 
+TODO at night. infinite scrolling. css.
+
+http://stackoverflow.com/questions/5129598/how-to-link-a-folder-with-an-existing-heroku-app
 
 NOTES
 -had trouble with Sign out Button. It would throw an error but on refresh it would sign you out.

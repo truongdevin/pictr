@@ -15,6 +15,7 @@ var UserShow = require('./components/user_show');
 
 // ApiUtil = require('./util/api_util');
 // UserStore = require('./stores/user_store');
+// PostStore = require('./stores/post_store');
 
 
 var App = React.createClass({
