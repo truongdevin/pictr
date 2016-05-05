@@ -36,11 +36,11 @@ var removeLike = function(relationship) {
 
 
 var setPost = function(post) {
-  if (location.hash.includes("/users/")) {
+  if (location.hash.includes("/users/") && !location.hash.includes("modal=true")) {
     var user = UserStore.find(post.user_id);
     user.posts.push(post);
   }
-}
+};
 
 UserStore.all = function () {
   var allUsers = Object.keys(_users).map(function (userId) {

@@ -15,7 +15,9 @@ var resetPosts = function (posts) {
 };
 
 var setPost = function (post) {
-  post.comments = [];
+  // if (!post.comments) {
+  //   post.comments = [];
+  // }
   _posts[post.id] = post;
 };
 

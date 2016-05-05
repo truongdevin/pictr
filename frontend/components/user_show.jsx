@@ -1,10 +1,12 @@
 var React = require('react');
 var UserStore = require('../stores/user_store.js');
-var PostStore = require('../stores/post_store.js');
 var ClientActions = require('../actions/client_actions.js');
 var UserStats = require('./user_stats');
 var Modal = require("react-modal");
 var UserShowPost = require('./user_show_post');
+
+var hashHistory = require('react-router').hashHistory;
+
 
 var style = {
   overlay : {
@@ -39,7 +41,8 @@ module.exports = React.createClass({
       posts: [],
       user: [],
       modalOpen: false,
-      url: []
+      url: [],
+      post: []
     };
   },
 
@@ -69,12 +72,20 @@ module.exports = React.createClass({
   },
 
   closeModal: function(){
+    hashHistory.push({
+      pathname: this.props.location.pathname,
+    });
     this.setState({ modalOpen: false });
     style.content.opacity = 0;
   },
 
-  openModal: function(url){
-    this.setState({ modalOpen: true , url: url});
+  openModal: function(url, post){
+    // debugger;
+    hashHistory.push({
+      pathname: this.props.location.pathname,
+      query: {modal:true}
+    });
+    this.setState({ modalOpen: true , url: url, post:post});
   },
 
   onModalOpen: function() {
@@ -86,7 +97,7 @@ module.exports = React.createClass({
     var posts = this.state.posts.map(function(post){
       var idx = post.image_url.indexOf('upload')+6;
       var url = post.image_url.slice(0,idx)+"/w_600,h_600,c_limit"+post.image_url.slice(idx);
-      return <img key={post.id} onClick={self.openModal.bind(null,url)} className="user-photos" src={url}/>;
+      return <img key={post.id} onClick={self.openModal.bind(null,url,post)} className="user-photos" src={url}/>;
     });
     return (
       <div>
@@ -98,6 +109,7 @@ module.exports = React.createClass({
           onAfterOpen={this.onModalOpen}
           onRequestClose={this.closeModal}>
           <img src={this.state.url}/>
+          <UserShowPost currPost={this.state.post}/>
         </Modal>
       </div>
     );

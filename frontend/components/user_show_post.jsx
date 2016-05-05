@@ -1,6 +1,7 @@
 var React = require('react');
 var PostStore = require('../stores/post_store.js');
 var ClientActions = require('../actions/client_actions.js');
+var hashHistory = require('react-router').hashHistory;
 
 module.exports = React.createClass({
   getInitialState: function() {
@@ -10,12 +11,12 @@ module.exports = React.createClass({
   },
 
   componentDidMount: function() {
-    this.blahListener = PostStore.addListener(this.fetchPost);
+    this.postListener = PostStore.addListener(this.fetchPost);
     ClientActions.fetchPost(this.props.currPost.id);
   },
 
   componentWillUnmount: function () {
-    this.blahListener.remove();
+    this.postListener.remove();
   },
 
   fetchPost: function () {
@@ -26,6 +27,11 @@ module.exports = React.createClass({
   },
 
   render: function () {
-    return <div>{this.state.post.id}</div>;
+    if (this.state.post !== undefined) {
+      debugger;
+      return <div>{this.state.post.id}</div>;
+    } else {
+      return <div></div>;
+    }
   }
 });
