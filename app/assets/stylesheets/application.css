@@ -451,6 +451,10 @@ body {
   padding: 10px 10px 10px 0px;
 }
 
+.user-show-followers div:hover {
+  cursor: pointer;
+}
+
 .user-show-stats-container {
   /*background-color: maroon;*/
   display: flex;

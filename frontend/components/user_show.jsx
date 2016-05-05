@@ -99,9 +99,24 @@ module.exports = React.createClass({
       var url = post.image_url.slice(0,idx)+"/w_600,h_600,c_limit"+post.image_url.slice(idx);
       return <img key={post.id} onClick={self.openModal.bind(null,url,post)} className="user-photos" src={url}/>;
     });
+
+    var followedUsers = [];
+    var followers = [];
+    if (this.state.user.followed_users) {
+      this.state.user.followed_users.forEach(function(followedUser) {
+        followedUsers.push(UserStore.find(followedUser.followed_id));
+      });
+
+      this.state.user.followers.forEach(function(follower) {
+        followers.push(UserStore.find(follower.follower_id));
+      });
+    }
     return (
       <div>
-        <UserStats user={this.state.user}/>
+        <UserStats user={this.state.user}
+          followedUsers={followedUsers}
+          followers={followers}
+          callback={this.closeModal}/>
         <div className="user-photos-container">{posts}</div>
         <Modal
           isOpen={this.state.modalOpen}
