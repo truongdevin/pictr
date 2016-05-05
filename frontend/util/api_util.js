@@ -21,7 +21,6 @@ module.exports = {
       method: 'POST',
       data: {post: data},
       success: function(post) {
-        console.log("created post!");
         ServerActions.receivePost(post);
       }
     });
@@ -108,7 +107,6 @@ module.exports = {
       data: {relationship: data},
       dataType: 'json',
       success: function(relationship) {
-        console.log("Followed!");
         ServerActions.receiveRelationship(relationship);
       }
     });
@@ -119,7 +117,6 @@ module.exports = {
       url: "api/relationships/" + id,
       type: "DELETE",
       success: function (relationship) {
-        console.log("Unfollowed!");
         ServerActions.removeRelationship(relationship);
       }
     });
@@ -132,7 +129,6 @@ module.exports = {
       data: {like: data},
       dataType: 'json',
       success: function(like) {
-        console.log("Liked!");
         ServerActions.receiveLike(like);
       }
     });
@@ -143,7 +139,6 @@ module.exports = {
       url: "api/likes/" + id,
       type: "DELETE",
       success: function (like) {
-        console.log("Unliked!");
         ServerActions.removeLike(like);
       }
     });
