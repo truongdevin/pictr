@@ -18,7 +18,6 @@ module.exports = React.createClass({
   render: function () {
     var comment = this.props.comment;
     var deleteButton = "";
-
     if (comment.user.username === JSON.parse(localStorage.getItem('currentUser')).username) {
       deleteButton = <button className="delete-button" onClick={this.deleteComment}>x</button>;
     }

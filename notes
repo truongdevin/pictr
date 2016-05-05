@@ -22,3 +22,6 @@ NOTES
     client action which calls api_utils#fetchCurrentUser which accesses the database to grab the current user
     and set them inside a localStorage("currentUser", JSON.stringify(user)).
     - to access the user. do JSON.parse(localStorage.getItem("currentUser")).id
+
+-had trouble getting my user show page to display the comments and photo when clicking an individual image.
+learned to have to be consistent with my json.jbuilder stuff using index and show.

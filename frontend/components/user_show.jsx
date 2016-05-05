@@ -108,8 +108,7 @@ module.exports = React.createClass({
           style={style}
           onAfterOpen={this.onModalOpen}
           onRequestClose={this.closeModal}>
-          <img src={this.state.url}/>
-          <UserShowPost currPost={this.state.post}/>
+          <UserShowPost selectedPost={this.state.post}/>
         </Modal>
       </div>
     );

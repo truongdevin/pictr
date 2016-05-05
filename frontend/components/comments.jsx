@@ -12,7 +12,7 @@ module.exports = React.createClass({
         <IndividualComment key={comment.id} comment={comment}/>
       );
     });
-    
+
     var likes;
     switch (post.likes.length) {
       case (0):

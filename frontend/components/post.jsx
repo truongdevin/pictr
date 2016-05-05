@@ -32,8 +32,7 @@ module.exports = React.createClass({
     }
 
     var idx = post.image_url.indexOf('upload')+6;
-    var url = post.image_url.slice(0,idx)+"/w_600"+post.image_url.slice(idx)
-
+    var url = post.image_url.slice(0,idx)+"/w_600"+post.image_url.slice(idx);
     return(
       <div className="individual-post">
         <div className="post-author">
