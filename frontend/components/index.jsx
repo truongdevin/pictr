@@ -5,7 +5,7 @@ var Post = require('../components/post');
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return { posts: [] };
+    return { posts: [] , intro: <div/>};
   },
 
   componentDidMount: function () {
@@ -18,7 +18,19 @@ module.exports = React.createClass({
   },
 
   getPosts: function () {
-    this.setState({ posts: PostStore.all() });
+    this.setState({posts: PostStore.all(), intro: <div/>});
+    if (this.state.posts.length < 1) {
+      this.setState({
+        intro: (
+          <div className="welcome">
+            <h2>Welcome to Pictr!</h2><br/>
+            <div>- Use the Search button to find users to follow</div>
+            <br/>
+            <div>- Or start uploading your own photos</div>
+          </div>
+        )
+      });
+    }
   },
 
   render: function () {
@@ -26,20 +38,9 @@ module.exports = React.createClass({
       return (<Post key={post.id} post={post}/>);
     });
 
-    var intro = <div></div>;
-    if (posts.length < 1) {
-      intro = (
-        <div className="welcome">
-          <h2>Welcome to Pictr!</h2><br/>
-          <div>- Use the Search button to find users to follow</div>
-          <br/>
-          <div>- Or start uploading your own photos</div>
-        </div>
-      );
-    }
     return (
       <div>
-        {intro}
+        {this.state.intro}
         <div>{posts}</div>
       </div>
     );
