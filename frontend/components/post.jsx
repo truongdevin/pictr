@@ -7,6 +7,9 @@ module.exports = React.createClass({
     var userId = this.props.post.user.id;
     var url = "/users/"+userId;
     hashHistory.push(url);
+    if (this.props.callback) {
+      this.props.callback();
+    }
   },
 
   render: function(){
@@ -33,6 +36,13 @@ module.exports = React.createClass({
 
     var idx = post.image_url.indexOf('upload')+6;
     var url = post.image_url.slice(0,idx)+"/w_600"+post.image_url.slice(idx);
+    var comments;
+    if (this.props.callback) {
+      comments = <Comments post={post} callback={this.props.callback}/>;
+    } else {
+      comments = <Comments post={post}/>;
+    }
+    
     return(
       <div className="individual-post">
         <div className="post-author">
@@ -40,7 +50,7 @@ module.exports = React.createClass({
           <span className="age">{age}</span>
         </div>
         <img className="index-photos" src={url}/>
-        <Comments post={post}/>
+        {comments}
       </div>
     );
   }

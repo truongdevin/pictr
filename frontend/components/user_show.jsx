@@ -80,7 +80,6 @@ module.exports = React.createClass({
   },
 
   openModal: function(url, post){
-    // debugger;
     hashHistory.push({
       pathname: this.props.location.pathname,
       query: {modal:true}
@@ -115,15 +114,16 @@ module.exports = React.createClass({
       <div>
         <UserStats user={this.state.user}
           followedUsers={followedUsers}
-          followers={followers}
-          callback={this.closeModal}/>
+          followers={followers}/>
         <div className="user-photos-container">{posts}</div>
         <Modal
           isOpen={this.state.modalOpen}
           style={style}
           onAfterOpen={this.onModalOpen}
           onRequestClose={this.closeModal}>
-          <UserShowPost selectedPost={this.state.post}/>
+          <UserShowPost
+            selectedPost={this.state.post}
+            callback={this.closeModal}/>
         </Modal>
       </div>
     );

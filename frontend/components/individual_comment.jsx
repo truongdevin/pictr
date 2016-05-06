@@ -12,6 +12,9 @@ module.exports = React.createClass({
   redirectUser: function(e) {
     var userId = this.props.comment.user.id;
     var url = "/users/"+userId;
+    if (this.props.callback) {
+      this.props.callback();
+    }
     hashHistory.push(url);
   },
 

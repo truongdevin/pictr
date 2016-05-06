@@ -7,10 +7,13 @@ module.exports = React.createClass({
 
   render: function () {
     var post = this.props.post;
+    var self = this;
     var comments = post.comments.map(function(comment){
-      return (
-        <IndividualComment key={comment.id} comment={comment}/>
-      );
+      if (self.props.callback) {
+        return <IndividualComment key={comment.id} comment={comment} callback={self.props.callback}/>;
+      } else {
+        return <IndividualComment key={comment.id} comment={comment}/>;
+      }
     });
 
     var likes;

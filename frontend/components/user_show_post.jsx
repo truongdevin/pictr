@@ -29,7 +29,7 @@ module.exports = React.createClass({
 
   render: function () {
     if (this.state.post !== undefined && this.state.post.comments !== undefined) {
-      return <Post post={this.state.post}/>;
+      return <Post post={this.state.post} callback={this.props.callback}/>;
     } else {
       return <div></div>;
     }

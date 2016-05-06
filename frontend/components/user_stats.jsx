@@ -70,7 +70,7 @@ module.exports = React.createClass({
     var followedUsersContent = followedUsers.map(function(singleUser){
       return (
         <ul key={singleUser.id} className="dropdown-content">
-          <SearchItem user={singleUser} callback={self.props.callback}/>
+          <SearchItem user={singleUser} callback={self.closeModal2}/>
           <li><FollowButton user={singleUser}/></li>
         </ul>
       );
@@ -79,7 +79,7 @@ module.exports = React.createClass({
     var followersContent = followers.map(function(singleUser){
       return (
         <ul key={singleUser.id} className="dropdown-content">
-          <SearchItem user={singleUser} callback={self.props.callback}/>
+          <SearchItem user={singleUser} callback={self.closeModal1}/>
           <li><FollowButton user={singleUser}/></li>
         </ul>
       );
