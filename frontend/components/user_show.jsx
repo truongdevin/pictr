@@ -4,7 +4,6 @@ var ClientActions = require('../actions/client_actions.js');
 var UserStats = require('./user_stats');
 var Modal = require("react-modal");
 var UserShowPost = require('./user_show_post');
-var FollowButton = require('./follow_button');
 
 var hashHistory = require('react-router').hashHistory;
 
@@ -43,8 +42,7 @@ module.exports = React.createClass({
       user: [],
       modalOpen: false,
       url: [],
-      post: [],
-      button: <div/>
+      post: []
     };
   },
 
@@ -70,9 +68,6 @@ module.exports = React.createClass({
       full_name: user.full_name,
       posts: user.posts,
       user: user
-    });
-    this.setState({
-      button: <FollowButton user={this.state.user}/>
     });
   },
 
@@ -120,7 +115,6 @@ module.exports = React.createClass({
         <UserStats user={this.state.user}
           followedUsers={followedUsers}
           followers={followers}/>
-        {this.state.button}
         <div className="user-photos-container">{posts.reverse()}</div>
         <Modal
           isOpen={this.state.modalOpen}

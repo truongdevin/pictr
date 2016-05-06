@@ -98,6 +98,7 @@ module.exports = React.createClass({
               {user.followed_users.length} following
             </div>
           </div>
+          <FollowButton user={this.props.user}/>
         </div>
 
         <Modal
