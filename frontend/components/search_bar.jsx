@@ -34,12 +34,12 @@ module.exports = React.createClass({
 
     var currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
-    allUsers = allUsers.filter(function(singleUser){
-      if (singleUser.username === currentUser.username) {
-        return false;
-      }
-      return true;
-    });
+    // allUsers = allUsers.filter(function(singleUser){
+    //   if (singleUser.username === currentUser.username) {
+    //     return false;
+    //   }
+    //   return true;
+    // });
 
     if(searchString.length > 0){
       allUsers = allUsers.filter(function(singleUser){
