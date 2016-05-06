@@ -40,6 +40,10 @@ module.exports = React.createClass({
       }
     });
 
+    if (currentUser.id === user.id) {
+      followButton = <div/>;
+    }
+
     return <div>{followButton}</div>;
   }
 });

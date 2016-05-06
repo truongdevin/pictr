@@ -464,7 +464,7 @@ body {
   padding: 20px 75px;
   box-sizing: border-box;
   vertical-align: middle;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid lightgrey;
 }
 
 .user-show-username {
