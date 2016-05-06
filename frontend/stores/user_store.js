@@ -19,12 +19,10 @@ var setUser = function (user) {
 };
 
 var addLike = function(relationship) {
-  // debugger;
   var user = UserStore.find(relationship.follower_id);
   user.followed_users.push(relationship);
   var user2 = UserStore.find(relationship.followed_id);
   user2.followers.push(relationship);
-  // debugger;
 };
 
 var removeLike = function(relationship) {
