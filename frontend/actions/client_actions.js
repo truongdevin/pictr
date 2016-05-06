@@ -1,8 +1,8 @@
 var ApiUtil = require('../util/api_util');
 
 module.exports = {
-  fetchPosts: function() {
-    ApiUtil.fetchPosts();
+  fetchPosts: function(count) {
+    ApiUtil.fetchPosts(count);
   },
 
   createPost: function(data) {

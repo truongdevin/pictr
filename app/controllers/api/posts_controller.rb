@@ -3,7 +3,7 @@ class Api::PostsController < ApplicationController
   def index
     subquery = Relationship.select("followed_id").where("follower_id = ?", current_user.id)
     @posts = Post.includes(:user, :likes, {comments: :user})
-      .where("user_id IN (#{subquery.to_sql}) OR user_id = ?", current_user.id)
+      .where("user_id IN (#{subquery.to_sql}) OR user_id = ?", current_user.id).limit(3 * count).order(id: :desc)
     render :index
   end
 
@@ -24,5 +24,9 @@ class Api::PostsController < ApplicationController
   private
   def post_params
     params.require(:post).permit(:user_id, :image_url)
+  end
+
+  def count
+    params[:count] ? params[:count].to_i : 1
   end
 end

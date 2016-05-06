@@ -1,16 +1,13 @@
 var ServerActions = require("../actions/server_actions");
 
 module.exports = {
-  fetchPosts: function(){
+  fetchPosts: function(count){
     $.ajax({
       url: '/api/posts',
       method: 'GET',
+      data: {count: count},
       success: function(posts) {
         ServerActions.receiveAll(posts);
-      },
-      error: function() {
-        localStorage.clear();
-        window.location = "session/new";
       }
     });
   },

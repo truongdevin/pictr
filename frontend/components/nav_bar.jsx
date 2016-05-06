@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactRouter = require('react-router');
 var ClientActions = require('../actions/client_actions.js');
-var hashHistory = ReactRouter.hashHistory;
+var hashHistory = require('react-router').hashHistory;
 var SearchBar = require('./search_bar');
 var Modal = require("react-modal");
 var UserStore = require("../stores/user_store");
@@ -41,6 +41,12 @@ module.exports = React.createClass({
     this.setState({ modalOpen: false });
     style.content.opacity = 0;
     ClientActions.fetchPosts();
+    if (!location.hash.includes('users')) {
+      hashHistory.push({
+        pathname:'/',
+        query:{r:true}
+      });
+    }
   },
 
   openModal: function(){

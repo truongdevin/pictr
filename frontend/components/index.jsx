@@ -2,19 +2,23 @@ var React = require('react');
 var PostStore = require('../stores/post_store.js');
 var ClientActions = require('../actions/client_actions.js');
 var Post = require('../components/post');
+var hashHistory = require('react-router').hashHistory;
+
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return { posts: [] , intro: <div/>};
+    return { posts: [] , intro: <div/>, scrollCount: 1};
   },
 
   componentDidMount: function () {
     this.postListener = PostStore.addListener(this.getPosts);
+    this.infiniteListener = window.addEventListener("scroll",this.addPosts);
     ClientActions.fetchPosts();
   },
 
   componentWillUnmount: function () {
     this.postListener.remove();
+    window.removeEventListener('scroll',this.addPosts,false);
   },
 
   getPosts: function () {
@@ -32,6 +36,17 @@ module.exports = React.createClass({
       });
     }
   },
+
+  addPosts: function () {
+    if (location.hash.includes('r=true')) {
+      this.state.scrollCount = 1;
+      hashHistory.push('/');
+    }
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      this.state.scrollCount += 1;
+      ClientActions.fetchPosts(this.state.scrollCount);
+   }
+ },
 
   render: function () {
     var posts = this.state.posts.map(function (post) {
