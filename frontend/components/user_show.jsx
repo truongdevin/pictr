@@ -115,7 +115,7 @@ module.exports = React.createClass({
         <UserStats user={this.state.user}
           followedUsers={followedUsers}
           followers={followers}/>
-        <div className="user-photos-container">{posts}</div>
+        <div className="user-photos-container">{posts.reverse()}</div>
         <Modal
           isOpen={this.state.modalOpen}
           style={style}
