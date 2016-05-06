@@ -33,8 +33,19 @@ module.exports = React.createClass({
   getInitialState: function() {
     return {
       modalOpen1:false,
-      modalOpen2: false
+      modalOpen2: false,
+      user: this.props.user,
+      followedUsers: this.props.followedUsers,
+      followers: this.props.followers
     };
+  },
+
+  componentWillReceiveProps: function(nextProps) {
+    this.setState({
+      user: nextProps.user,
+      followedUsers: nextProps.followedUsers,
+      followers: nextProps.followers
+    })
   },
 
   closeModal1: function(){
@@ -60,9 +71,9 @@ module.exports = React.createClass({
   },
 
   render: function() {
-    var followedUsers = this.props.followedUsers;
-    var followers = this.props.followers;
-    var user = this.props.user;
+    var followedUsers = this.state.followedUsers;
+    var followers = this.state.followers;
+    var user = this.state.user;
     if (user.length===0) {
       return <div></div>;
     }
@@ -98,7 +109,7 @@ module.exports = React.createClass({
               {user.followed_users.length} following
             </div>
           </div>
-          <FollowButton user={this.props.user}/>
+          <FollowButton user={this.state.user}/>
         </div>
 
         <Modal

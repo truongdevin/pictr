@@ -19,8 +19,12 @@ var setUser = function (user) {
 };
 
 var addLike = function(relationship) {
+  // debugger;
   var user = UserStore.find(relationship.follower_id);
   user.followed_users.push(relationship);
+  var user2 = UserStore.find(relationship.followed_id);
+  user2.followers.push(relationship);
+  // debugger;
 };
 
 var removeLike = function(relationship) {
@@ -31,7 +35,15 @@ var removeLike = function(relationship) {
       dupedFollowedUsers.splice(i,1);
     }
   }
+  var user2 = UserStore.find(relationship.followed_id);
+  var dupedFollowers = user2.followers.slice();
+  for (var i=0; i<dupedFollowers.length; i++) {
+    if (dupedFollowers[i].id === relationship.id) {
+      dupedFollowers.splice(i,1);
+    }
+  }
   user.followed_users = dupedFollowedUsers;
+  user2.followers = dupedFollowers;
 };
 
 
