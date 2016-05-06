@@ -45,7 +45,7 @@ Comment.create!(user_id: jimmy.id, post_id: p10.id, body: "I'll give you a disco
 Comment.create!(user_id: brandon.id, post_id: p10.id, body: "OMG looks good. Thanks Uncle Jimmy!")
 
 c6 = Comment.create!(user_id: brandon.id, post_id: p13.id, body: "So fat!")
-Comment.create!(user_id: lyanna.id, post_id: p13.id, body: "Keep eating those all those sweets and you'll become like that too! :P")
+Comment.create!(user_id: lianna.id, post_id: p13.id, body: "Keep eating those all those sweets and you'll become like that too! :P")
 
 c7 = Comment.create!(user_id: jon.id, post_id: p14.id, body: "Found this old pic of ghost on my camera")
 Comment.create!(user_id: jenn.id, post_id: p14.id, body: "Awww he was so cuteee! He's all big and fearsome now. Still cuddly though!")
@@ -66,3 +66,4 @@ Comment.create!(user_id: jimmy.id, post_id: p9.id, body: "Hahaha nah don't worry
 r1 = Relationship.create!(follower_id: guest.id, followed_id: jenn.id)
 r2 = Relationship.create!(follower_id: guest.id, followed_id: jon.id)
 r3 = Relationship.create!(follower_id: guest.id, followed_id: brandon.id)
+r3 = Relationship.create!(follower_id: guest.id, followed_id: jimmy.id)
