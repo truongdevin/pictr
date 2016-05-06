@@ -30,16 +30,8 @@ module.exports = React.createClass({
 
   render: function() {
     var allUsers = this.state.users,
-      searchString = this.state.searchString.trim().toLowerCase();
-
-    var currentUser = JSON.parse(localStorage.getItem('currentUser'));
-
-    // allUsers = allUsers.filter(function(singleUser){
-    //   if (singleUser.username === currentUser.username) {
-    //     return false;
-    //   }
-    //   return true;
-    // });
+      searchString = this.state.searchString.trim().toLowerCase(),
+      currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
     if(searchString.length > 0){
       allUsers = allUsers.filter(function(singleUser){

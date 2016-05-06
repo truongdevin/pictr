@@ -25,3 +25,6 @@ NOTES
 
 -had trouble getting my user show page to display the comments and photo when clicking an individual image.
 learned to have to be consistent with my json.jbuilder stuff using index and show.
+
+- had trouble getting modals to disappear when navigating to other pages. solved this using callbacks.
+- had trouble resetting counter for infinite scroll. solved by using query string injection.
