@@ -42,7 +42,7 @@ c4 = Comment.create!(user_id: jon.id, post_id: p5.id, body: "For sure! I'm sure 
 c5 = Comment.create!(user_id: jimmy.id, post_id: p10.id, body: "Man this was delicious! Made it myself. Anyone want to buy? ;P")
 Comment.create!(user_id: jon.id, post_id: p10.id, body: "Haha of course you'd be charging. Looks really good man!")
 Comment.create!(user_id: jimmy.id, post_id: p10.id, body: "I'll give you a discount. jk! Come visit me one of these days! I'll make some for you and bran.")
-Comment.create!(user_id: bran.id, post_id: p10.id, body: "OMG looks good. Thanks Uncle Jimmy!")
+Comment.create!(user_id: brandon.id, post_id: p10.id, body: "OMG looks good. Thanks Uncle Jimmy!")
 
 c6 = Comment.create!(user_id: brandon.id, post_id: p13.id, body: "So fat!")
 Comment.create!(user_id: lyanna.id, post_id: p13.id, body: "Keep eating those all those sweets and you'll become like that too! :P")
