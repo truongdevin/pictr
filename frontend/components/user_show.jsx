@@ -96,6 +96,7 @@ module.exports = React.createClass({
     var posts = this.state.posts.map(function(post){
       var idx = post.image_url.indexOf('upload')+6;
       var url = post.image_url.slice(0,idx)+"/w_600,h_600,c_limit"+post.image_url.slice(idx);
+      url = url.slice(0,4) + 's' + url.slice(4);
       return <img key={post.id} onClick={self.openModal.bind(null,url,post)} className="user-photos" src={url}/>;
     });
 

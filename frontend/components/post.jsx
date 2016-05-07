@@ -36,13 +36,14 @@ module.exports = React.createClass({
 
     var idx = post.image_url.indexOf('upload')+6;
     var url = post.image_url.slice(0,idx)+"/w_600"+post.image_url.slice(idx);
+    url = url.slice(0,4) + 's' + url.slice(4);
     var comments;
     if (this.props.callback) {
       comments = <Comments post={post} callback={this.props.callback}/>;
     } else {
       comments = <Comments post={post}/>;
     }
-    
+
     return(
       <div className="individual-post">
         <div className="post-author">
