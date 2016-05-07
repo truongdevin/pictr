@@ -50,7 +50,7 @@ module.exports = React.createClass({
 
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight
     && Date.now() > this.state.time + 1000) {
-      this.state.time += 1;
+      this.state.time = Date.now();
       this.state.scrollCount += 1;
       ClientActions.fetchPosts(this.state.scrollCount);
    }
