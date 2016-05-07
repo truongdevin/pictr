@@ -7,7 +7,12 @@ var hashHistory = require('react-router').hashHistory;
 
 module.exports = React.createClass({
   getInitialState: function () {
-    return { posts: [] , intro: <div/>, scrollCount: 1};
+    return {
+      posts: [] ,
+      intro: <div/>,
+      scrollCount: 1,
+      time: Date.now()
+    };
   },
 
   componentDidMount: function () {
@@ -42,7 +47,10 @@ module.exports = React.createClass({
       this.state.scrollCount = 1;
       hashHistory.push('/');
     }
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight
+    && Date.now() > this.state.time + 1000) {
+      this.state.time += 1;
       this.state.scrollCount += 1;
       ClientActions.fetchPosts(this.state.scrollCount);
    }
