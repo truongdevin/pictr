@@ -175,6 +175,10 @@ body {
   transition: 0.3s;
 }
 
+.home-button:not(:hover) {
+  transition: 0.3s;
+}
+
 .navbar-item {
   padding: 22.5px 16px;
 }
@@ -186,6 +190,10 @@ body {
   background-color: #ff8080;
   color: white;
   cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbar-item:not(:hover) {
   transition: 0.3s;
 }
 
@@ -217,7 +225,6 @@ body {
   width: 600px;
   border: 1px solid lightgray;
   border-radius: 5px;
-
 }
 
 .disable-margin {
@@ -306,6 +313,13 @@ body {
 
 .delete-button:hover {
   cursor: pointer;
+  color: grey;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.delete-button:not(:hover) {
+  transition: 0.3s;
 }
 
 .delete-button:focus {
@@ -366,6 +380,10 @@ body {
   transition: 0.3s;
 }
 
+.follow-button:not(:hover) {
+  transition: 0.3s;
+}
+
 .unfollow-button {
   background-color: #ff8080;
   text-align: center;
@@ -383,10 +401,10 @@ body {
 }
 
 .unfollow-button:hover {
-  background-color: white;
   cursor: pointer;
+  /*background-color: white;
   color: #ff8080;
-  transition: 0.3s;
+  transition: 0.3s;*/
 }
 
 .search-item {
@@ -399,7 +417,10 @@ body {
 }
 
 .search-item:hover {
+  color: red;
   cursor: pointer;
+  /*font-weight: bold;*/
+  transition: 1s;
 }
 
 .comment-form-and-like-button {
@@ -414,6 +435,10 @@ body {
   width: 50px;
 }
 
+.like-container:hover {
+  cursor: pointer;
+}
+
 .like-container #filled {
   color: #ff8080;
 }
@@ -422,8 +447,14 @@ body {
   color: lightgrey;
 }
 
-.like-container:hover {
-  cursor: pointer;
+.like-container #unfilled:hover {
+  color: #ff8080;
+  transition: 0.3s;
+}
+
+.like-container #unfilled:not(:hover) {
+  color: #lightgrey;
+  transition: 0.3s;
 }
 
 .user-photos {
@@ -475,4 +506,8 @@ body {
 
 .user-show-full-name {
   font-weight: bold;
+}
+
+.ReactModal__Body--open {
+  overflow: hidden;
 }
