@@ -417,10 +417,13 @@ body {
 }
 
 .search-item:hover {
-  color: red;
+  color: crimson;
   cursor: pointer;
-  /*font-weight: bold;*/
-  transition: 1s;
+  transition: 0.3s;
+}
+
+.search-item:not(:hover) {
+  transition: 0.3s;
 }
 
 .comment-form-and-like-button {
@@ -485,6 +488,12 @@ body {
 
 .user-show-followers div:hover {
   cursor: pointer;
+  color: black;
+  transition: 0.3s;
+}
+
+.user-show-followers div:not(:hover) {
+  transition: 0.3s;
 }
 
 .user-show-stats-container {
