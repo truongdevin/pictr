@@ -44,8 +44,10 @@ module.exports = React.createClass({
       comments = <Comments post={post}/>;
     }
 
+    var postClass = location.hash.includes("users") ? "individual-post disable-margin" : "individual-post"
+
     return(
-      <div className="individual-post">
+      <div className={postClass}>
         <div className="post-author">
           <span className="user-link" onClick={this.redirectUser}>{post.user.username}</span>
           <span className="age">{age}</span>

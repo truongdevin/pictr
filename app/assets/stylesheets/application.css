@@ -213,14 +213,15 @@ body {
 .individual-post {
   font-size: 14px;
   background-color: white;
-  /*margin: auto;*/
   margin: 60px auto;
   width: 600px;
   border: 1px solid lightgray;
-  /*border: 1px solid burlywood;*/
   border-radius: 5px;
-  /*padding-top: 10px;
-  padding-bottom: 10px;*/
+
+}
+
+.disable-margin {
+  margin: 0px;
 }
 
 .index-photos {

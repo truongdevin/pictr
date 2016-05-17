@@ -29,7 +29,8 @@ var style = {
     outline         : 'none',
     opacity         : '0',
     transition      : 'opacity 0.5s',
-    borderRadius    : '5px'
+    borderRadius    : '5px',
+    overflowX       : 'hidden'
   }
 };
 
