@@ -125,6 +125,8 @@ body {
 
 .auth-button:hover {
   cursor: pointer;
+  background-color: #DC5151;
+  transition: 0.3s;
 }
 
 .auth-other {
@@ -134,6 +136,15 @@ body {
 
 .auth-other span {
   color: #ff8080;
+}
+
+.auth-other span:hover {
+  color: #DC5151;
+  transition: 0.3s;
+}
+
+.auth-other span:hover {
+  transition: 0.3s;
 }
 
 .auth-container h2 {
@@ -281,6 +292,12 @@ body {
 
 .user-link:hover {
   cursor: pointer;
+  color: #DC5151;
+  transition: 0.3s;
+}
+
+.user-link:not(:hover) {
+  transition: 0.3s;
 }
 
 .comment-form-box {
@@ -417,7 +434,7 @@ body {
 }
 
 .search-item:hover {
-  color: crimson;
+  color: #DC5151;
   cursor: pointer;
   transition: 0.3s;
 }
